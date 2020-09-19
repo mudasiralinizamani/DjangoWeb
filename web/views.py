@@ -1,5 +1,4 @@
 from django import http
-from django import shortcuts
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.contrib.auth.forms import UserCreationForm, User
@@ -12,10 +11,9 @@ from . import forms
 # Create the Web Views - Mudasir ALi
 
 def Index(req):
-    return shortcuts.render(req, 'Pages/Index.html')
+    return render(req, 'Pages/Index.html')
     
-def Videos(req):
-    return http.HttpResponse("Videos Page")
+
 
 def About(req):
     return render(req, 'Pages/About.html')

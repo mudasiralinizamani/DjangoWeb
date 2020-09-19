@@ -1,0 +1,108 @@
+{% extends 'Must/Must.html' %}
+{% block title %}Tech MUD | Videos{% endblock %}
+{% load static %}
+{% block css_1 %}{% static 'Styles/Pages/Videos/Videos.css' %}{% endblock %}
+{% block active_videos %}active{% endblock %}
+
+{% block body %}
+<div class="box-section">
+
+  <div class="box card">
+    <div class="card-image">
+      <img
+        src="{% static video_3_thumb %}"
+        class="box-img"
+        alt="Image"
+      />
+    </div>
+    <div class="card-content">
+      <div class="media">
+        <div class="media-left">
+          <figure class="image is-48x48">
+            <img src="{% static mudasir %}" alt="Placeholder image" />
+          </figure>
+        </div>
+        <div class="media-content">
+          <p class="title is-4"><a href="{% url 'About' %}">{{name}}</a></p>
+          <p class="subtitle is-6">{{brief}}</p>
+        </div>
+      </div>
+
+      <div class="content">
+        <h4 class="title">{{video_3_title}}</h4>
+        <p>{{video_3_desc}}</p>
+        <time datetime="2020-14-8">{{video_3_date}}</time>
+      </div>
+      <a href="{% url video_3_link %}" class="button is-danger"
+        >Start Watching >></a
+      >
+    </div>
+  </div>
+
+  <div class="box card">
+    <div class="card-image">
+      <img
+        src="{% static video_2_thumb %}"
+        class="box-img"
+        alt="Image"
+      />
+    </div>
+    <div class="card-content">
+      <div class="media">
+        <div class="media-left">
+          <figure class="image is-48x48">
+            <img src="{% static mudasir %}" alt="Placeholder image" />
+          </figure>
+        </div>
+        <div class="media-content">
+          <p class="title is-4"><a href="{% url 'About' %}">{{name}}</a></p>
+          <p class="subtitle is-6">{{brief}}</p>
+        </div>
+      </div>
+
+      <div class="content">
+        <h4 class="title">{{video_2_title}}</h4>
+        <p>{{video_2_desc}}</p>
+        <time datetime="2020-14-8">{{video_2_date}}</time>
+      </div>
+      <a href="{% url video_2_link %}" class="button is-danger"
+        >Start Watching >></a
+      >
+    </div>
+  </div>
+
+  <div class="box card">
+    <div class="card-image">
+      <img
+        src="{% static video_1_thumb %}"
+        class="box-img"
+        alt="Image"
+      />
+    </div>
+    <div class="card-content">
+      <div class="media">
+        <div class="media-left">
+          <figure class="image is-48x48">
+            <img src="{% static mudasir %}" alt="Placeholder image" />
+          </figure>
+        </div>
+        <div class="media-content">
+          <p class="title is-4"><a href="{% url 'About' %}">{{name}}</a></p>
+          <p class="subtitle is-6">{{brief}}</p>
+        </div>
+      </div>
+
+      <div class="content">
+        <h4 class="title">{{video_1_title}}</h4>
+        <p>{{video_1_desc}}</p>
+        <time datetime="2020-14-8">{{video_1_date}}</time>
+      </div>
+      <a href="{% url video_1_link %}" class="button is-danger"
+        >Start Watching >></a
+      >
+    </div>
+  </div>
+
+</div>
+
+{% endblock %}
