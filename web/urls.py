@@ -24,14 +24,14 @@ admin.site.site_title = "Tech MUD Admin Panel"
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.Index, name='Index'),
-    path('videos/', views.Videos, name='Videos'),
     path('about/', views.About, name='About'),
     path('contact/', views.Contact, name='Contact'),
     path('signup/', views.Signup, name="Signup"),
     path('login/', views.Login, name="Login"),
     path('logout/', views.Logout, name="Logout"),
 
-    path('blogs/', include('blog.urls'),),
+    path('videos/', include('videos.urls')),
+    path('blogs/', include('blog.urls')),
     path('courses/', include('courses.urls')),
 
     # Facebook Link
