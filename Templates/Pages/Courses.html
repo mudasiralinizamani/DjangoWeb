@@ -1,0 +1,87 @@
+{% extends 'Must/Must.html' %}
+{% load static %}
+{% block title %}Tech MUD | Courses{% endblock %}
+{% block active_courses %}active{% endblock %} 
+{% block css_1 %}{% static 'Styles/Pages/Courses/Courses.css' %}{% endblock %}
+
+{% block body %}
+<section class="box-sec">
+  <div class="box card">
+    <img src="{% static thumb_5 %}" class="box-img" alt="" />
+    <div class="card-content">
+      <div class="media">
+        <h1 class="title is-4" style="color: black">{{name_5}}</h1>
+      </div>
+
+      <div class="content">
+        <p>{{desc_5}}</p>
+      </div>
+      <a href="{% url 'Nodejs_1' %}" class="button is-warning"
+        >Start Watching >></a
+      >
+    </div>
+  </div>
+
+  <div class="box card">
+    <img src="{% static thumb_4 %}" class="box-img" alt="" />
+    <div class="card-content">
+      <div class="media">
+        <h1 class="title is-4" style="color: black">{{name_4}}</h1>
+      </div>
+
+      <div class="content">
+        <p>{{desc_4}}</p>
+      </div>
+      <a href="{% url 'Go_1' %}" class="button is-warning">Start Watching >></a>
+    </div>
+  </div>
+
+  <div class="box card">
+    <img src="{% static thumb_3 %}" class="box-img" alt="" />
+    <div class="card-content">
+      <div class="media">
+        <h1 class="title is-4" style="color: black">{{name_3}}</h1>
+      </div>
+
+      <div class="content">
+        <p>{{desc_3}}</p>
+      </div>
+      <a href="{% url 'Deno_1' %}" class="button is-warning"
+        >Start Watching >></a
+      >
+    </div>
+  </div>
+
+  <div class="box card">
+    <img src="{% static thumb_2 %}" class="box-img" alt="" />
+    <div class="card-content">
+      <div class="media">
+        <h1 class="title is-4" style="color: black">{{name_2}}</h1>
+      </div>
+
+      <div class="content">
+        <p>{{desc_2}}</p>
+      </div>
+      <a href="{% url 'EthicalHacking_1' %}" class="button is-warning"
+        >Start Watching >></a
+      >
+    </div>
+  </div>
+
+  <div class="box card">
+    <img src="{% static thumb_1 %}" class="box-img" alt="" />
+    <div class="card-content">
+      <div class="media">
+        <h1 class="title is-4" style="color: black">{{name_1}}</h1>
+      </div>
+
+      <div class="content">
+        <p>{{desc_1}}</p>
+      </div>
+      <a href="{% url 'Selenium_1' %}" class="button is-warning"
+        >Start Watching >></a
+      >
+    </div>
+  </div>
+</section>
+{% endblock %}

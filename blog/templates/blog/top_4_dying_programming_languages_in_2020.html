@@ -1,0 +1,268 @@
+{% extends 'Must/Must.html' %}
+{% block title %}Tech MUD | Blogs {{title}}{% endblock %}
+{% load static %}
+{% block css_1 %}{% static 'Styles/Blogs/Blogs.css' %}{% endblock %}
+{% block css_2 %}{% static 'Styles/Pages/Blogs/main.css' %}{% endblock %}
+{% block css_3 %}{% static 'Styles/Pages/Blogs/linearicons.css' %}{% endblock %}
+{% block css_4 %}{% static 'Styles/Pages/Blogs/font-awesome.min.css' %}{% endblock %}
+{% block active_blogs %}active{% endblock %}
+
+{% block body %}
+<!--================Blog Area =================-->
+<section class="blog_area single-post-area section-gap">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 posts-list">
+        <div class="single-post row">
+          <div class="col-lg-12">
+            <div class="feature-img">
+              <img class="img-fluid top-img" src="{% static thumb %}" alt="" />
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-3">
+            <div class="blog_info text-right">
+              <ul class="blog_meta list">
+                <li>
+                  <a href="{% url 'About' %}"
+                    >Mudasir Ali<i class="lnr lnr-user"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="#">{{date}}<i class="lnr lnr-calendar-full"></i></a>
+                </li>
+              </ul>
+              <ul class="social-links">
+                <li>
+                  <a href="{% url 'Facebook_link' %}" target="_blank"
+                    ><i class="fa fa-facebook"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="{% url 'Twitter_link' %}" target="_blank"
+                    ><i class="fa fa-twitter"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="{% url 'Github_link' %}" target="_blank"
+                    ><i class="fa fa-github"></i
+                  ></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-9 col-md-9 blog_details">
+            <h2>{{title}}</h2>
+            <p class="excert">{{desc}}</p>
+          </div>
+          <div class="col-lg-12">
+            <div class="quotes">
+              <!-- Queto Bos -->
+            </div>
+            <div class="row">
+              <div class="col-lg-12 mt-25">
+                <h2 class="tile is-4">4. Haskell</h2>
+                <p class="subtitle is-5">
+                  Haskell programming language is essentially a very functional
+                  programming language but it's also very very difficult to
+                  learn and difficult to understand. according to pipel it's
+                  currently in place number 27 and pipel takes a lot of
+                  different things into its equation when it's figuring out like
+                  which programming language is popular or which one is kind of
+                  losing interest so it will look at things like how many google
+                  searches are being taken place for this how many answers are
+                  there available for this in the community how active the
+                  community is so for haskell it's kind of going down this is
+                  one of the programming languages that is dying now.
+                </p>
+                <br />
+                <h2 class="title is-4">3. Perl</h2>
+                <p class="subtitle is-5">
+                  Pearl is one of those languages that is on the decline. Perl
+                  is on position 22 in the pipal index it's going down in
+                  popularity it also means going down and a lot of the support
+                  around that community again disclaimer so they're not a lot of
+                  those people being really upset really hurt if you're learning
+                  this there's still jobs out there for it there's still people.
+                  that are willing to pay you for it it's just not as popular
+                  it's just declining okay so don't take it so seriously to your
+                  heart all right. But pearl is one of the programming languages
+                  that's dying.
+                </p>
+                <br />
+                <h2 class="title is-4">2. Objective C</h2>
+                <p class="subtitle is-5">
+                  Objective C now this is a programming language that is being
+                  used that was being used by apple but apple over the last like
+                  35 years has been slowly trying to kill it and get it out.
+                  According to the pipal index it's in position number eight and
+                  it is definitely on the decline compared to python and
+                  javascript. According to the stack overflow Objective C is the
+                  second most dreaded programming language.
+                </p>
+                <br />
+                <h2 class="title is-4">1. Visual Basic</h2>
+                <p class="subtitle is-5">
+                  Visual Basic VBA all right this is one programming language
+                  people try to run away from and on pipel it is ranked 15 and
+                  is on the decline and why it's dying not only is it losing
+                  popularity over time you know of course if you compare it
+                  python and javascript it's like super like low and kind of on
+                  the decline but another reason why it's dying is just because
+                  it's the most dreaded programming language it was used a lot
+                  back in the day nowadays it's not really used and nobody is
+                  really trying to use it that much now of course the disclaimer
+                  there are still jobs available for it if you did learn it you
+                  could still get jobs all right so just keep that in mind don't
+                  get your panties tied in a twist and here is vba the number
+                  one most dreaded programming language according to stack
+                  overflow.
+                </p>
+                <br />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="navigation-area">
+          <div class="row">
+            <div
+              class="col-lg-6 col-md-6 col-12 nav-left flex-row d-flex justify-content-start align-items-center"
+            >
+              <div class="thumb">
+                <a href="{% url prev_post_link %}"
+                  ><img
+                    class="img-fluid n-p-post-img"
+                    src="{% static prev_post_thumb %}"
+                    alt=""
+                /></a>
+              </div>
+              <div class="arrow">
+                <a href="{% url prev_post_link %}"
+                  ><span class="lnr text-white lnr-arrow-left"></span
+                ></a>
+              </div>
+              <div class="detials">
+                <p>Prev Post</p>
+                <a href="{% url prev_post_link %}">
+                  <h4>{{prev_post_title}}</h4>
+                </a>
+              </div>
+            </div>
+            <div
+              class="col-lg-6 col-md-6 col-12 nav-right flex-row d-flex justify-content-end align-items-center"
+            >
+              <div class="detials">
+                <p>Next Post</p>
+                <a href="{% url next_post_link %}">
+                  <h4>{{next_post_title}}</h4>
+                </a>
+              </div>
+              <div class="arrow">
+                <a href="{% url next_post_link %}"
+                  ><span class="lnr text-white lnr-arrow-right"></span
+                ></a>
+              </div>
+              <div class="thumb">
+                <a href="{% url next_post_link %}"
+                  ><img
+                    class="img-fluid n-p-post-img"
+                    src="{% static next_post_thumb %}"
+                    alt=""
+                /></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4">
+        <div class="blog_right_sidebar">
+          <aside class="single_sidebar_widget search_widget">
+            <div class="input-group">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Not working yet"
+              />
+              <span class="input-group-btn">
+                <button class="btn btn-default" type="button">
+                  <i class="lnr lnr-magnifier"></i>
+                </button>
+              </span>
+            </div>
+            <!-- /input-group -->
+            <div class="br"></div>
+          </aside>
+          <aside class="single_sidebar_widget author_widget">
+            <img
+              class="author_img rounded-circle"
+              src="{% static 'Pics/my-pic.jpg' %}"
+              alt=""
+            />
+            <h4>Mudasir Ali</h4>
+            <p>Creator of Tech MUD</p>
+            <div class="social_icon">
+              <a href="{% url 'Facebook_link' %}" target="_blank"
+                ><i class="fa fa-facebook"></i
+              ></a>
+              <a href="{% url 'Twitter_link' %}" target="_blank"
+                ><i class="fa fa-twitter"></i
+              ></a>
+              <a href="{% url 'Github_link' %}" target="_blank"
+                ><i class="fa fa-github"></i
+              ></a>
+            </div>
+            <p>
+              {{aboutme}}
+              <a href="{% url 'About' %}">Click here</a>
+            </p>
+            <div class="br"></div>
+          </aside>
+          <aside class="single_sidebar_widget popular_post_widget">
+            <h3 class="widget_title">Recent Posts</h3>
+            <div class="media post_item">
+              <img src="{% static recent_post_1_thumb %}" alt="post" />
+              <div class="media-body">
+                <a href="{% url recent_post_1_link %}">
+                  <h3>{{recent_post_1_title}}</h3>
+                </a>
+                <p>{{recent_post_1_date}}</p>
+              </div>
+            </div>
+            <div class="media post_item">
+              <img src="{% static recent_post_2_thumb %}" alt="post" />
+              <div class="media-body">
+                <a href="{% url recent_post_2_link %}">
+                  <h3>{{recent_post_2_title}}</h3>
+                </a>
+                <p>{{recent_post_2_date}}</p>
+              </div>
+            </div>
+            <div class="media post_item">
+              <img src="{% static recent_post_3_thumb %}" alt="post" />
+              <div class="media-body">
+                <a href="{{recent_post_3_link}}">
+                  <h3>{{recent_post_3_title}}</h3>
+                </a>
+                <p>{{recent_post_3_date}}</p>
+              </div>
+            </div>
+            <div class="media post_item">
+              <img src="{% static recent_post_4_thumb %}" alt="post" />
+              <div class="media-body">
+                <a href="{{recent_post_4_link}}">
+                  <h3>{{recent_post_4_title}}</h3>
+                </a>
+                <p>{{recent_post_4_date}}</p>
+              </div>
+            </div>
+            <div class="br"></div>
+          </aside>
+          <aside class="single_sidebar_widget ads_widget">
+            <div class="br"></div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

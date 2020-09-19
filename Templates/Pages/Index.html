@@ -1,0 +1,89 @@
+{% extends 'Must/Must.html' %}
+{% block title %}Tech MUD | Home{% endblock %}
+
+{% load static %}
+
+{% block css_1 %}{% static 'Styles/Pages/Index/Index.css' %}{% endblock %}
+
+{% block active_home %}active{% endblock %}
+
+{% block other_head %}
+<!-- Google Adsense Auto ADS -->
+<script
+  data-ad-client="ca-pub-9694874056946796"
+  async
+  src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+></script>
+{% endblock %}
+
+{% block body %}
+<div class="top">
+  <h1 class="title" style="color: white">Explore Programming</h1>
+  <h2 class="subtitle" style="color: white">& Technology</h2>
+</div>
+
+<div class="center">
+  <div class="box card">
+    <img
+      src="{% static 'Pics/Pages/Index/courses.jpg' %}"
+      class="box-img"
+      alt=""
+    />
+    <div class="card-content">
+      <div class="media">
+        <h1 class="title is-4" style="color: black">Courses</h1>
+      </div>
+
+      <div class="content">
+        <p>
+          If you are seeking Videos on specific topics or you want courses of
+          coding, programming. Then you are at right place. I will bring new
+          courses.
+        </p>
+      </div>
+      <a href="/courses" class="button is-info">Courses</a>
+    </div>
+  </div>
+
+  <div class="box card">
+    <img
+      src="{% static 'Pics/Pages/Index/blogs.jpg' %}"
+      class="box-img"
+      alt=""
+    />
+    <div class="card-content">
+      <div class="media">
+        <h1 class="title is-4" style="color: black">Blogs</h1>
+      </div>
+      <div class="content">
+        <p>
+          Hi Friends. If you want to read blogs about programming and new
+          technology. So you have to read my blogs.
+        </p>
+      </div>
+      <a href="/blogs" class="button is-info">Blogs</a>
+    </div>
+  </div>
+
+  <div class="box card">
+    <img
+      src="{% static 'Pics/Pages/Index/contact.jpg' %}"
+      class="box-img"
+      alt=""
+    />
+    <div class="card-content">
+      <div class="media">
+        <h1 class="title is-4" style="color: black">Contact</h1>
+      </div>
+      <div class="content">
+        <p>
+          Hello Friends. If you want new courses and you want to work with me so
+          please don't hesitate to contact me.
+        </p>
+      </div>
+      <a href="/contact" class="button is-info">Contact</a>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

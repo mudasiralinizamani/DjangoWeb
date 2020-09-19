@@ -1,0 +1,269 @@
+{% extends 'Must/Must.html' %}
+{% block title %}Tech MUD | Blogs{% endblock %}
+{% load static %}
+{% block css_1 %}{% static 'Styles/Pages/Blogs/main.css' %}{% endblock %}
+{% block css_2 %}{% static 'Styles/Pages/Blogs/linearicons.css' %}{% endblock %}
+{% block css_3 %}{% static 'Styles/Pages/Blogs/font-awesome.min.css' %}{% endblock %}
+{% block active_blogs %}active{% endblock %}
+
+{% block body %}
+
+<!--================Blog Area =================-->
+<section class="blog_area section-gap">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8">
+        <div class="blog_left_sidebar">
+
+          <article class="row blog_item">
+            <div class="col-md-3">
+              <div class="blog_info text-right">
+                <ul class="blog_meta list">
+                  <li>
+                    <a href="{% url 'About' %}">Mudasir Ali<i class="lnr lnr-user"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"
+                      >{{post_4_date}}<i class="lnr lnr-calendar-full"></i
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-9">
+              <div class="blog_post">
+                <a href="{% url post_4_link %}"
+                  ><img src="{% static post_4_thumb %}" alt=""
+                /></a>
+                <div class="blog_details">
+                  <a href="{% url post_4_link %}">
+                    <h2>{{post_4_tittle}}</h2>
+                  </a>
+                  <p>
+                    {{post_4_desc}}
+                  </p>
+                  <a href="{% url post_4_link %}" class="blog_btn">View More</a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="row blog_item">
+            <div class="col-md-3">
+              <div class="blog_info text-right">
+                <ul class="blog_meta list">
+                  <li>
+                    <a href="{% url 'About' %}">Mudasir Ali<i class="lnr lnr-user"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"
+                      >{{post_3_date}}<i class="lnr lnr-calendar-full"></i
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-9">
+              <div class="blog_post">
+                <a href="{% url post_3_link %}"
+                  ><img src="{% static post_3_thumb %}" alt=""
+                /></a>
+                <div class="blog_details">
+                  <a href="{% url post_3_link %}">
+                    <h2>{{post_3_tittle}}</h2>
+                  </a>
+                  <p>
+                    {{post_3_desc}}
+                  </p>
+                  <a href="{% url post_3_link %}" class="blog_btn">View More</a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="row blog_item">
+            <div class="col-md-3">
+              <div class="blog_info text-right">
+                <ul class="blog_meta list">
+                  <li>
+                    <a href="{% url 'About' %}">Mudasir Ali<i class="lnr lnr-user"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"
+                      >{{post_2_date}}<i class="lnr lnr-calendar-full"></i
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-9">
+              <div class="blog_post">
+                <a href="{% url post_2_link %}"
+                  ><img src="{% static post_2_thumb %}" alt=""
+                /></a>
+                <div class="blog_details">
+                  <a href="{% url post_2_link %}">
+                    <h2>{{post_2_tittle}}</h2>
+                  </a>
+                  <p>
+                    {{post_2_desc}}
+                  </p>
+                  <a href="{% url post_2_link %}" class="blog_btn">View More</a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="row blog_item">
+            <div class="col-md-3">
+              <div class="blog_info text-right">
+                <ul class="blog_meta list">
+                  <li>
+                    <a href="{% url 'About' %}">Mudasir Ali<i class="lnr lnr-user"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"
+                      >{{post_1_date}}<i class="lnr lnr-calendar-full"></i
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-9">
+              <div class="blog_post">
+                <a href="{% url post_1_link %}"
+                  ><img src="{% static post_1_thumb %}" alt=""
+                /></a>
+                <div class="post_details">
+                  <a href="{% url post_1_link %}">
+                    <h2>{{post_1_tittle}}</h2>
+                  </a>
+                  <p>
+                    {{post_1_desc}}
+                  </p>
+                  <a href="{% url post_1_link %}" class="blog_btn">View More</a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <nav class="blog-pagination justify-content-center d-flex">
+            <ul class="pagination">
+              <li class="page-item disabled">
+                <a href="#" class="page-link" aria-label="Previous">
+                  <span aria-hidden="true">
+                    <span class="lnr lnr-chevron-left"></span>
+                  </span>
+                </a>
+              </li>
+              <li class="page-item active">
+                <a href="{% url 'Blogs' %}" class="page-link">01</a>
+              </li>
+              <li class="page-item disabled">
+                <a href="#" class="page-link" aria-label="Next">
+                  <span aria-hidden="true">
+                    <span class="lnr lnr-chevron-right"></span>
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="blog_right_sidebar">
+          <aside class="single_sidebar_widget search_widget">
+            <div class="input-group">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Not working yet"
+              />
+              <span class="input-group-btn">
+                <button class="btn btn-default" type="button">
+                  <i class="lnr lnr-magnifier"></i>
+                </button>
+              </span>
+            </div>
+            <!-- /input-group -->
+            <div class="br"></div>
+          </aside>
+          <aside class="single_sidebar_widget author_widget">
+            <img
+              class="author_img rounded-circle"
+              src="{% static 'Pics/my-pic.jpg' %}"
+              alt=""
+            />
+            <h4>Mudasir Ali</h4>
+            <p>Creator of Tech MUD</p>
+            <div class="social_icon">
+              <a href="{% url 'Facebook_link' %}" target="_blank"
+                ><i class="fa fa-facebook"></i
+              ></a>
+              <a href="{% url 'Twitter_link' %}" target="_blank"
+                ><i class="fa fa-twitter"></i
+              ></a>
+              <a href="{% url 'Github_link' %}" target="_blank"
+                ><i class="fa fa-github"></i
+              ></a>
+            </div>
+            <p>
+              {{aboutme}}
+              <a href="{% url 'About' %}">Click here</a>
+            </p>
+            <div class="br"></div>
+          </aside>
+
+          <aside class="single_sidebar_widget popular_post_widget">
+            <h3 class="widget_title">Recent Posts</h3>
+            <div class="media post_item">
+              <img src="{% static recent_post_1_thumb %}" alt="post" />
+              <div class="media-body">
+                <a href="{% url recent_post_1_link %}">
+                  <h3>{{recent_post_1_title}}</h3>
+                </a>
+                <p>{{recent_post_1_date}}</p>
+              </div>
+            </div>
+            <div class="media post_item">
+              <img src="{% static recent_post_2_thumb %}" alt="post" />
+              <div class="media-body">
+                <a href="{% url recent_post_2_link %}">
+                  <h3>{{recent_post_2_title}}</h3>
+                </a>
+                <p>{{recent_post_2_date}}</p>
+              </div>
+            </div>
+            <div class="media post_item">
+              <img src="{% static recent_post_3_thumb %}" alt="post" />
+              <div class="media-body">
+                <a href="{{recent_post_3_link}}">
+                  <h3>{{recent_post_3_title}}</h3>
+                </a>
+                <p>{{recent_post_3_date}}</p>
+              </div>
+            </div>
+            <div class="media post_item">
+              <img src="{% static recent_post_4_thumb %}" alt="post" />
+              <div class="media-body">
+                <a href="{{recent_post_4_link}}">
+                  <h3>{{recent_post_4_title}}</h3>
+                </a>
+                <p>{{recent_post_4_date}}</p>
+              </div>
+            </div>
+            <div class="br"></div>
+          </aside>
+
+          <aside class="single_sidebar_widget ads_widget">
+            <a href="#"
+              ><img class="img-fluid" src="img/blog/add.jpg" alt=""
+            /></a>
+            <div class="br"></div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
