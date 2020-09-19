@@ -1,0 +1,151 @@
+.video-title {
+  font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    "Helvetica", "Arial", sans-serif;
+
+  font-weight: 300;
+  font-size: 1.7rem;
+}
+
+.sec-1 {
+}
+
+.video-div {
+  margin: 5px 2px;
+}
+
+.Video {
+  width: 100%;
+  height: 75vh;
+
+}
+
+.sec-2{
+  margin: 5em 1.2em;
+}
+
+#description {
+  height: 40vh;
+}
+
+.code-div {
+  background-color: #15222ddb;
+  height: 60vh;
+  font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+}
+
+.my-btn {
+  text-decoration: none;
+}
+
+.my-btn:hover {
+  text-decoration: none;
+}
+
+.scroll {
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.code {
+  margin: 6px 2px !important;
+}
+
+/* Coding Text Colours */
+
+.space {
+  margin-left: 2.1rem !important;
+}
+
+.space-2 {
+  margin-left: 4.4rem;
+}
+
+.space-3 {
+  margin-left: 6.7rem;
+}
+.space-4 {
+  margin-left: 8.1rem;
+}
+.space-5 {
+  margin-left: 10.13rem;
+}
+
+
+// Colours
+
+// HTML
+$Html_Colours: (
+  element: #ff5050,
+  class: #f36ef3,
+  breaket: rgb(186, 210, 219),
+  string: #37c537,
+);
+
+
+// CSS
+
+$Css_Colours: (
+  selector: #ca4eca,
+  element: #ff5050,
+  property: rgb(246, 240, 240),
+  number: rgb(241, 161, 11),
+  function: #7171f5,
+);
+
+$Python_Colours: (
+  if: #cc2ecc,
+  no: #dcd8d8,
+  eq: red,
+  ifn: #fdbf4b,
+  num: yellow,
+  sel: #fdbf4b,
+  string: #08bf08,
+  atri: skyblue,
+  fu: #ce2a2a,
+  com: grey,
+);
+
+  color: Python_Colours(if);
+}
+
+.no{
+  color: Python_Colours(no);
+}
+
+.eq{
+  color: Python_Colours(eq);
+}
+.ifn{
+  color: Python_Colours(ifn);
+}
+
+.string{
+  color: Python_Colours(string);
+}
+
+.num{
+  color: Python_Colours(num);
+}
+
+.sel{
+  color: Python_Colours(sel);
+}
+
+.atri{
+  color: Python_Colours(atri);
+}
+
+.fu{
+  color: Python_Colours(fu);
+}
+
+.com {
+  color: Python_Colours(com);
+}
+
+pre {
+  background-color: #15222ddb !important;
+  padding: 1em !important;
+  text-align: left !important;
+}
