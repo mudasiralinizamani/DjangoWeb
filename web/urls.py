@@ -42,5 +42,11 @@ urlpatterns = [
 
     #  Twiter Link
     path('https://twitter.com/Mudasir78169406', views.Twitter, name="Twitter_link"),
+
+    #  Youtube Link
+    path('https://twitter.com/Mudasir78169406', views.Twitter, name="Youtube_link"),
+
+    #  Website Link
+    path('https://techmudboy.com/', views.Website, name="Website_link"),
     
 ]

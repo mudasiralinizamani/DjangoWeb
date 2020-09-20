@@ -64,3 +64,6 @@ def Github(req):
 
 def Twitter(req):
     return redirect('https://twitter.com/Mudasir78169406')
+
+def Website(req):
+    return redirect('https://techmudboy.com/')

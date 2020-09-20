@@ -20,8 +20,17 @@
 
 }
 
-.sec-2{
-  margin: 5em 1.2em;
+pre{
+  background-color: #15222ddb !important;
+}
+
+
+#container-2 {
+  margin-left: 5%;
+  margin-right: 1%;
+  margin-bottom: 3vh;
+  display: flex;
+  flex-direction: column;
 }
 
 #description {
@@ -29,8 +38,8 @@
 }
 
 .code-div {
-  background-color: #15222ddb;
-  height: 60vh;
+  background-color: #15222ddb !important;
+  // height: 60vh;
   font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
 }
 
@@ -47,9 +56,12 @@
   overflow-y: scroll;
 }
 
+
+
 .code {
   margin: 6px 2px !important;
 }
+
 
 /* Coding Text Colours */
 
@@ -105,47 +117,3 @@ $Python_Colours: (
   fu: #ce2a2a,
   com: grey,
 );
-
-  color: Python_Colours(if);
-}
-
-.no{
-  color: Python_Colours(no);
-}
-
-.eq{
-  color: Python_Colours(eq);
-}
-.ifn{
-  color: Python_Colours(ifn);
-}
-
-.string{
-  color: Python_Colours(string);
-}
-
-.num{
-  color: Python_Colours(num);
-}
-
-.sel{
-  color: Python_Colours(sel);
-}
-
-.atri{
-  color: Python_Colours(atri);
-}
-
-.fu{
-  color: Python_Colours(fu);
-}
-
-.com {
-  color: Python_Colours(com);
-}
-
-pre {
-  background-color: #15222ddb !important;
-  padding: 1em !important;
-  text-align: left !important;
-}
