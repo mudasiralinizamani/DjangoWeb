@@ -1,0 +1,83 @@
+{% extends 'Must/Must.html' %}
+{% block title %}Tech MUD | Videos {{title}}{% endblock %}
+{% load static %}
+{% block css_1 %}{% static 'Styles/Videos/Style.css' %}{% endblock %}
+{% block css_2 %}{% static 'Styles/Coding/Python/Style.css' %}{% endblock %}
+{% block active_videos %}active{% endblock %}
+
+{% block body %}
+<section class="sec-1">
+  <section class="hero is-medium is-light">
+    <div class="hero-body">
+      <h1 class="title">
+        {{title}}
+      </h1>
+      <iframe
+        src="{{video_link}}"
+        class="Video"
+        allowfullscreen
+      ></iframe>
+    </div>
+  </section>
+</section>
+<section class="sec-2">
+  <section class="hero is-large is-warning is-bold">
+    <div class="hero-body">
+      <div class="container">
+        <h1 class="title">Description</h1>
+        <h2 class="subtitle">
+          <p>
+            {{desc}} <br><br>
+
+            Links <br><br>
+            <a href="https://sites.google.com/a/chromium.org/chromedriver/downloads" target="_blank">Chrome Web Driver</a><br><br>
+            <a href="{% url 'Facebook_link' %}" target="_blank">Facebook</a> <a href="{% url 'Website_link' %}" target="_blank">Website</a> <a href="{% url 'Github_link' %}" target="_blank">Github</a> <a href="{% url 'Youtube_link' %}" target="_blank">Youtube</a> 
+            
+          </p>
+        </h2>
+      </div>
+    </div>
+  </section>
+</section>
+<section class="sec-3">
+  <section class="hero is-fullheight is-dark is-bold">
+    <div class="hero-body">
+      <div class="container">
+        <h1 class="title">Code</h1>
+        <h2 class="subtitle">Python</h2>
+        <div class="code-div">
+          <pre>
+            <a type="button" class="btn btn-sm btn-secondary" href="{% static code_download %}" download style="float: right;">Download</a>
+<span class="com"># You have to download the Code</span>
+
+<span class="if">from</span> <span class="text">selenium</span> <span class="if">import</span> <span class="text">webdriver</span>
+<span class="if">from</span> <span class="text">time</span> <span class="if">import</span> <span class="text">sleep</span>
+
+<span class="text">driver</span> <span class="eq">=</span> <span class="string">'Chrome_WebDriver_Path'</span>
+
+<span class="if">class</span> <span class="func">InstaBot</span><span class="text">:</span>
+  <span class="if">def</span> <span class="func">__init__</span><span class="text">(</span><span class="atri">self</span><span class="text">,</span> <span class="atri">username</span><span class="text">,</span> <span class="atri">password</span><span class="text">):</span>
+    <span class="self">self</span><span class="text">.driver</span> <span class="eq">=</span> <span class="text">webdriver.</span><span class="func">Chrome</span><span class="text">(driver)</span>
+
+    <span class="self">self</span><span class="text">.username</span> <span class="eq">=</span> <span class="text">username</span>
+    <span class="self">self</span><span class="text">.password</span> <span class="eq">=</span> <span class="text">password</span>
+
+    <span class="self">self</span><span class="text">.driver.</span><span class="func">get</span><span class="text">(</span><span class="string">"https://www.instagram.com/"</span><span class="text">)</span>
+
+    <span class="func">sleep</span><span class="text">(</span><span class="int">5</span><span class="text">)</span>
+
+    <span class="self">self</span><span class="text">.driver.</span><span class="func">find_element_by_xpath</span><span class="text">(</span><span class="string">"//input[@name=\"username\"]"</span><span class="text">).</span><span class="func">send_keys</span><span class="text">(</span><span class="self">self</span><span class="text">.username)</span>
+    <span class="self">self</span><span class="text">.driver.</span><span class="func">find_element_by_xpath</span><span class="text">(</span><span class="string">"//input[@name=\"password\"]"</span><span class="text">).</span><span class="func">send_keys</span><span class="text">(</span><span class="self">self</span><span class="text">.password)</span>
+    <span class="self">self</span><span class="text">.driver.</span><span class="func">find_element_by_xpath</span><span class="text">(</span><span class="string">'//button[@type="submit"]'</span><span class="text">).</span><span class="func">click</span><span class="text">()</span>
+
+    <span class="func">sleep</span><span class="text">(</span><span class="int">5</span><span class="text">)</span>
+
+<span class="func">InstaBot</span><span class="text">(</span><span class="string">'Your Username'</span><span class="text">,</span> <span class="string">'Your Password'</span><span class="text">)</span>
+  </pre>
+
+        </div>
+      </div>
+    </div>
+  </section>
+</section>
+{% endblock %}

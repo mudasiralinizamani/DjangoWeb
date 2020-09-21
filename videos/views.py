@@ -19,8 +19,8 @@ Dates = {'Video_1': 'Aug 14, 2020', 'Video_2': 'Sep 1, 2020', 'Video_3': 'Sep 6,
 
 Links = {'Video_1': 'Video_1', 'Video_2': 'Video_2', 'Video_3': 'Video_3'}
 
-Video_Links = {'Video_1': 'https://www.youtube.com/embed/nER0LN0gIKY'}
-Code_Download = {'Video_1': ['Downloads/Codes/Videos/Video_1/Index.html', ''], }
+Video_Links = {'Video_1': 'https://www.youtube.com/embed/nER0LN0gIKY', 'Video_2': 'https://www.youtube.com/embed/mjzBYfNEDX0'}
+Code_Download = {'Video_1': ['Downloads/Codes/Videos/Video_1/Index.html', ''], 'Video_2': 'Downloads/Codes/Videos/Video_2/Instagram_login_automation.py'}
 
 def Videos(req):
     Context = {'name': Name, 'video_1_title': Titles[1], 'video_2_title': Titles[2], 'video_3_title': Titles[3],
@@ -41,7 +41,11 @@ def Video_1(req):
     return render(req, 'videos/Video_1.html', Context)
 
 def Video_2(req):
-    pass
+    Context = {'title': f'{Titles[2]} || SHORT VIDEO || Mudasir Ali',
+                'desc': Descyptions.get('Video_2'),
+                'video_link': Video_Links.get('Video_2'),
+                'code_download': Code_Download.get('Video_2')}
+    return render(req, 'videos/Video_2.html', Context)
 
 def Video_3(req):
     pass
