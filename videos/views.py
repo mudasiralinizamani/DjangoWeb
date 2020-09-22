@@ -6,7 +6,7 @@ Brief = 'Full Stack Developer'
 
 Name = 'Mudasir Ali'
 
-Titles = ['', 'Input Animation With HTML & CSS', 'Instagram Login Automation With Python & Selenium ', 'This Bot will get FOLLOWERS for you. ']
+Titles = ['', 'Input Animation With HTML & CSS', 'Instagram Login Automation With Python & Selenium ', 'This Bot will get FOLLOWERS for you']
 
 Descyptions = {'Video_1': 'In this video, I will tell you. How to create an Animated Input in Html CSS.',
                 'Video_2': 'In this video, I am creating a Instagram Login Automation Program. Code is provided.',
@@ -19,8 +19,11 @@ Dates = {'Video_1': 'Aug 14, 2020', 'Video_2': 'Sep 1, 2020', 'Video_3': 'Sep 6,
 
 Links = {'Video_1': 'Video_1', 'Video_2': 'Video_2', 'Video_3': 'Video_3'}
 
-Video_Links = {'Video_1': 'https://www.youtube.com/embed/nER0LN0gIKY', 'Video_2': 'https://www.youtube.com/embed/mjzBYfNEDX0'}
-Code_Download = {'Video_1': ['Downloads/Codes/Videos/Video_1/Index.html', ''], 'Video_2': 'Downloads/Codes/Videos/Video_2/Instagram_login_automation.py'}
+Video_Links = {'Video_1': 'https://www.youtube.com/embed/nER0LN0gIKY', 'Video_2': 'https://www.youtube.com/embed/mjzBYfNEDX0', 'Video_3': 'https://www.youtube.com/embed/DtLpy4uh9TU'}
+Code_Download = {'Video_1': ['Downloads/Codes/Videos/Video_1/Index.html', ''],
+                'Video_2': 'Downloads/Codes/Videos/Video_2/Instagram_login_automation.py',
+                'Video_3': 'Downloads/Codes/Videos/Video_3/Bot.py'
+                }
 
 def Videos(req):
     Context = {'name': Name, 'video_1_title': Titles[1], 'video_2_title': Titles[2], 'video_3_title': Titles[3],
@@ -47,5 +50,10 @@ def Video_2(req):
                 'code_download': Code_Download.get('Video_2')}
     return render(req, 'videos/Video_2.html', Context)
 
+
 def Video_3(req):
-    pass
+    Context = {'title': f'{Titles[3]} || Urdu/Hindi || Mudasir Ali',
+                'desc': Descyptions.get('Video_3'),
+                'video_link': Video_Links.get('Video_3'),
+                'code_download': Code_Download.get('Video_3')}
+    return render(req, 'videos/Video_3.html', Context)

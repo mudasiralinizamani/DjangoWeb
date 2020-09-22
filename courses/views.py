@@ -20,16 +20,44 @@ Thumbnails = {'Selenium': 'Pics/Pages/Courses/selenium.png',
               'Go': 'Pics/Pages/Courses/go.png',
               'Nodejs': 'Pics/Pages/Courses/nodejs.jpg'}
 
+# Nodejs Variables
+
+Nodejs_Videos_Link = {}
+
+Nodejs_Titles = {'Video_1': '', 'Video_2': '', 'Video_3': '', 'Video_4': '', 'Video_5': ''}
+
+Nodejs_Descryptions = {'Video_1': '',
+                        'Video_2': '',
+                        'Video_3': '',
+                        'Video_4': ''
+                        }
+
+Nodejs_Link = ['', '']
+
+Code_Download_Nodejs = {}
+
+# Go Variables
+
+# Deno Variables
+
+# Ethical Hacking Variables
+
+# Selenium Variables
+
+
 
 # Courses Main Function - Mudasir Ali
 def Courses(req):
-    return render(req, 'Pages/Courses.html', {'name_1': Names[1], 'name_2': Names[2], 'name_3': Names[3], 'name_4': Names[4], 'name_5': Names[5],
-                                              'desc_1': Descryptions.get('Selenium'), 'desc_2': Descryptions.get('Ethical Hacking'), 'desc_3': Descryptions.get('Deno'), 'desc_4': Descryptions.get('Go'), 'desc_5': Descryptions.get('Nodejs'),
-                                              'thumb_1': Thumbnails.get('Selenium'), 'thumb_2': Thumbnails.get('Ethical Hacking'), 'thumb_3': Thumbnails.get('Deno'), 'thumb_4': Thumbnails.get('Go'), 'thumb_5': Thumbnails.get('Nodejs')})
+    Context = {'name_1': Names[1], 'name_2': Names[2], 'name_3': Names[3], 'name_4': Names[4], 'name_5': Names[5],
+                'desc_1': Descryptions.get('Selenium'), 'desc_2': Descryptions.get('Ethical Hacking'), 'desc_3': Descryptions.get('Deno'), 'desc_4': Descryptions.get('Go'), 'desc_5': Descryptions.get('Nodejs'),
+                'thumb_1': Thumbnails.get('Selenium'), 'thumb_2': Thumbnails.get('Ethical Hacking'), 'thumb_3': Thumbnails.get('Deno'), 'thumb_4': Thumbnails.get('Go'), 'thumb_5': Thumbnails.get('Nodejs')}
+
+    return render(req, 'Pages/Courses.html', Context)
 
 # Nodejs Courses Functions - Mudasir Ali
 def Nodejs_1(req):
-    return render(req, 'courses/Nodejs/1.html')
+    Context = {}
+    return render(req, 'courses/Nodejs/1.html', Context)
 
 
 # Go Courses Functions - Mudasir Ali
