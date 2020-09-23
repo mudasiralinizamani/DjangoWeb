@@ -8,6 +8,10 @@ urlpatterns = [
 
     # Nodejs End Points  - Mudasir Ali
     path('nodejs-1/', views.Nodejs_1, name="Nodejs_1"),
+    path('nodejs-2/', views.Nodejs_2, name="Nodejs_2"),
+    path('nodejs-3/', views.Nodejs_3, name="Nodejs_3"),
+    path('nodejs-4/', views.Nodejs_4, name="Nodejs_4"),
+    path('nodejs-5/', views.Nodejs_5, name="Nodejs_5"),
 
     # Golang End Points - Mudasir Ali
     path('go-1/', views.Go_1, name="Go_1"),

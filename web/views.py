@@ -68,3 +68,6 @@ def Twitter(req):
 
 def Website(req):
     return redirect('https://techmudboy.com/')
+
+def Youtube(req):
+    return redirect('https://www.youtube.com/channel/UCTc1CZwD4fEGij3yZ9bwRQg?sub_confirmation=1')
