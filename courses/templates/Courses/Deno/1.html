@@ -1,0 +1,95 @@
+{% extends 'Must/Must.html' %}
+{% load static %} {% block title %}Tech MUD | Courses Go {{title}}{% endblock %}
+{% block active_courses %}active{% endblock %}
+{% block css_1 %}{% static 'Styles/Courses/Style.css' %}{% endblock %}
+{% block css_2 %}{% static 'Styles/Coding/Style.css' %}{% endblock %}
+
+{% block body %}
+<section class="sec-1">
+  <section class="hero is-fullheight is-light">
+    <div id="container">
+      <div id="Video_div">
+        <h1 class="title is-4 upper-title">{{title}}</h1>
+        <iframe src="{{video_link}}" class="Video" allowfullscreen></iframe>
+        <h1 class="title is-4 lower-title">{{title}}</h1>
+      </div>
+      <div class="content_box_title_1"><h2 class="title ">Deno</h2></div>
+      <div class="list-group content_box">
+        <div class="content_box_title_2"><h2 class="title ">Deno</h2></div>
+        {% for i in course_content %} {% if forloop.counter == 1%}
+        <a
+          href="/courses/deno-{{forloop.counter}}"
+          class="list-group-item list-group-item-action active"
+          >{{i}}</a
+        >
+        {% else %}
+        <a
+          href="/courses/deno-{{forloop.counter}}"
+          class="list-group-item list-group-item-action"
+          >{{i}}</a
+        >
+        {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+</section>
+<section class="sec-2">
+  <section class="hero is-medium is-warning is-bold">
+    <div class="hero-body">
+      <div class="container">
+        <h1 class="title">Description</h1>
+        <h2 class="subtitle">
+          <p>
+            {{desc}} <br /><br />
+
+            Links <br /><br />
+            <a
+              href="https://www.youtube.com/watch?v=OTA_Z-WV-8E&list=PLEKZSEN_gDvhmClPyqwAu1N3nWuS9oXGb&index=1"
+              target="_blank"
+              >Deno Playlist</a
+            ><br /><br />
+            <a href="{% url 'Facebook_link' %}" target="_blank">Facebook</a>
+            <a href="{% url 'Website_link' %}" target="_blank">Website</a>
+            <a href="{% url 'Github_link' %}" target="_blank">Github</a>
+            <a href="{% url 'Youtube_link' %}" target="_blank">Youtube</a>
+          </p>
+        </h2>
+      </div>
+    </div>
+  </section>
+</section>
+<section class="sec-3">
+  <section class="hero is-fullheight is-dark is-bold">
+    <div class="hero-body code-hero-body">
+      <div class="container code-container">
+        <h1 class="title">Code</h1>
+        <h2 class="subtitle">TypeScript</h2>
+        <div class="code-div">
+          <pre>
+            <a class="btn btn-sm btn-secondary" href="{% static code_download %}" download="" style="float: right;">Download</a>
+
+
+<span class="com"># You have to download the Code</span>
+
+          </pre>
+        </div>
+      </div>
+    </div>
+  </section>
+</section>
+<!-- Pagination - Mudasir Ali -->
+<nav
+  class="pagination is-rounded is-centered my-pagination"
+  role="navigation"
+  aria-label="pagination"
+>
+  <ul class="pagination-list">
+    <li><a class="pagination-link" href="{% url prev_link %}">&#60;&#60;</a></li>
+    <li><span class="pagination-ellipsis">&hellip;</span></li>
+
+    <li><span class="pagination-ellipsis">&hellip;</span></li>
+    <li><a class="pagination-link" href="{% url next_link %}">&#62;&#62;</a></li>
+  </ul>
+</nav>
+{% endblock %}

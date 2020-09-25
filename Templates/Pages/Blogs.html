@@ -4,6 +4,7 @@
 {% block css_1 %}{% static 'Styles/Pages/Blogs/main.css' %}{% endblock %}
 {% block css_2 %}{% static 'Styles/Pages/Blogs/linearicons.css' %}{% endblock %}
 {% block css_3 %}{% static 'Styles/Pages/Blogs/font-awesome.min.css' %}{% endblock %}
+{% block css_4 %}{% static 'Styles/Pages/Blogs/Blogs.css' %}{% endblock %}
 {% block active_blogs %}active{% endblock %}
 
 {% block body %}
@@ -217,7 +218,7 @@
           <aside class="single_sidebar_widget popular_post_widget">
             <h3 class="widget_title">Recent Posts</h3>
             <div class="media post_item">
-              <img src="{% static recent_post_1_thumb %}" alt="post" />
+              <img src="{% static recent_post_1_thumb %}" class="recent-post-img" alt="post" />
               <div class="media-body">
                 <a href="{% url recent_post_1_link %}">
                   <h3>{{recent_post_1_title}}</h3>
@@ -226,7 +227,7 @@
               </div>
             </div>
             <div class="media post_item">
-              <img src="{% static recent_post_2_thumb %}" alt="post" />
+              <img src="{% static recent_post_2_thumb %}" class="recent-post-img" alt="post" />
               <div class="media-body">
                 <a href="{% url recent_post_2_link %}">
                   <h3>{{recent_post_2_title}}</h3>
@@ -235,7 +236,7 @@
               </div>
             </div>
             <div class="media post_item">
-              <img src="{% static recent_post_3_thumb %}" alt="post" />
+              <img src="{% static recent_post_3_thumb %}" class="recent-post-img" alt="post" />
               <div class="media-body">
                 <a href="{{recent_post_3_link}}">
                   <h3>{{recent_post_3_title}}</h3>
@@ -244,7 +245,7 @@
               </div>
             </div>
             <div class="media post_item">
-              <img src="{% static recent_post_4_thumb %}" alt="post" />
+              <img src="{% static recent_post_4_thumb %}" class="recent-post-img" alt="post" />
               <div class="media-body">
                 <a href="{{recent_post_4_link}}">
                   <h3>{{recent_post_4_title}}</h3>
