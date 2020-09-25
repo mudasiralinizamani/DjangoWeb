@@ -240,7 +240,7 @@
             <div class="media post_item">
               <img src="{% static recent_post_3_thumb %}" class="recent-post-img" alt="post" />
               <div class="media-body">
-                <a href="{{recent_post_3_link}}">
+                <a href="{% url recent_post_3_link %}">
                   <h3>{{recent_post_3_title}}</h3>
                 </a>
                 <p>{{recent_post_3_date}}</p>
@@ -249,7 +249,7 @@
             <div class="media post_item">
               <img src="{% static recent_post_4_thumb %}" class="recent-post-img" alt="post" />
               <div class="media-body">
-                <a href="{{recent_post_4_link}}">
+                <a href="{% url recent_post_4_link %}">
                   <h3>{{recent_post_4_title}}</h3>
                 </a>
                 <p>{{recent_post_4_date}}</p>

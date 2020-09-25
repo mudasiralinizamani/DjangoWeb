@@ -63,7 +63,6 @@ Recent_Posts_Links.reverse()
 
 
 
-
 def Blogs(req):
     return render(req, 'Pages/Blogs.html', {'recent_post_1_title': Recent_Posts_Titles[0],
                                             'recent_post_1_thumb': Recent_Posts_Thumbnails[0],
