@@ -25,6 +25,39 @@
                   </li>
                   <li>
                     <a href="#"
+                      >{{post_5_date}}<i class="lnr lnr-calendar-full"></i
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-9">
+              <div class="blog_post">
+                <a href="{% url post_5_link %}"
+                  ><img src="{% static post_5_thumb %}" alt=""
+                /></a>
+                <div class="blog_details">
+                  <a href="{% url post_5_link %}">
+                    <h2>{{post_5_tittle}}</h2>
+                  </a>
+                  <p>
+                    {{post_5_desc}}
+                  </p>
+                  <a href="{% url post_5_link %}" class="blog_btn">View More</a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="row blog_item">
+            <div class="col-md-3">
+              <div class="blog_info text-right">
+                <ul class="blog_meta list">
+                  <li>
+                    <a href="{% url 'About' %}">Mudasir Ali<i class="lnr lnr-user"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"
                       >{{post_4_date}}<i class="lnr lnr-calendar-full"></i
                     ></a>
                   </li>
