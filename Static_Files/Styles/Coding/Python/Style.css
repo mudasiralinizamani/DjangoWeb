@@ -1,0 +1,39 @@
+.com {
+  color: grey;
+  font-style: italic;
+}
+
+.if {
+  color: #c435c4;
+  font-style: italic;
+}
+
+.text {
+  color: #ffffffeb;
+}
+
+.string {
+  color: #4dc44d;
+}
+
+.eq {
+  color: red;
+  font-style: italic;
+}
+
+.func {
+  color: #f0f02c;
+}
+
+.atri {
+  color: aqua;
+}
+
+.self {
+  color: #ee25a9;
+}
+
+.int {
+  color: orange;
+}
+/*# sourceMappingURL=Style.css.map */
