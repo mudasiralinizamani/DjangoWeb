@@ -1,0 +1,26 @@
+.com {
+  color: grey;
+  font-style: italic;
+}
+
+.html_bracket {
+  color: #ffffffeb;
+}
+
+.html_element {
+  color: #ff0f52;
+}
+
+.html_property {
+  color: #f0f02c;
+  font-style: italic;
+}
+
+.html_string {
+  color: #4dc44d;
+}
+
+.html_text {
+  color: #ffffffeb;
+}
+/*# sourceMappingURL=Style.css.map */
