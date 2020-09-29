@@ -23,9 +23,7 @@
     <link rel="stylesheet" href="{% block css_4 %} {% endblock %}" />
     <link rel="stylesheet" href="{% block css_5 %} {% endblock %}" />
 
-    <!-- Google Adsense -->
-    <script data-ad-client="ca-pub-9694874056946796" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-
+    
     {% block other_head %}
 
     {% endblock %}
@@ -53,7 +51,7 @@
             <div class="nav-item dropdown">
               <a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle user-action"><img src="{% static 'Pics/Logos/User.jpg' %}" class="avatar" alt="Avatar"> {{user}} <b class="caret"></b></a>
               <div class="dropdown-menu">
-                <a href="#" class="dropdown-item"><i class="fa fa-user-o"></i> Profile</a></a>
+                <a href="/profile" class="dropdown-item"><i class="fa fa-user-o"></i> Profile</a></a>
                 <a href="#" class="dropdown-item"><i class="fa fa-calendar-o"></i> Calendar</a></a>
                 <a href="#" class="dropdown-item"><i class="fa fa-sliders"></i> Settings</a></a>
                 <div class="dropdown-divider"></div>

@@ -4,5 +4,5 @@ from . import views
 # Create the Accounts Urls - Mudasir ALi
 
 urlpatterns = [
-   
+   path('', views.Profile)
 ]

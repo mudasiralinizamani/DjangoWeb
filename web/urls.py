@@ -30,6 +30,9 @@ urlpatterns = [
     path('login/', views.Login, name="Login"),
     path('logout/', views.Logout, name="Logout"),
 
+    path('profile/', include('accounts.urls')),
+
+
     path('videos/', include('videos.urls')),
     path('blogs/', include('blog.urls')),
     path('courses/', include('courses.urls')),
