@@ -5,103 +5,112 @@
 {% block active_videos %}active{% endblock %}
 
 {% block body %}
-<div class="box-section">
-  <div class="box card">
-    <div class="card-image">
-      <img
-        src="{% static video_3_thumb %}"
-        class="box-img"
-        alt="Image"
-      />
-    </div>
-    <div class="card-content">
-      <div class="media">
-        <div class="media-left">
-          <figure class="image is-48x48">
-            <img src="{% static mudasir %}" alt="Placeholder image" />
-          </figure>
-        </div>
-        <div class="media-content">
-          <p class="title is-4"><a href="{% url 'About' %}">{{name}}</a></p>
-          <p class="subtitle is-6">{{brief}}</p>
+
+
+
+
+  
+<div class="container box-container">
+
+  <div class="section">
+
+    <div class="row columns is-multiline">
+
+      <div class="column is-4">
+        <div class="card large my-box">
+          <div class="card-image">
+            <figure class="image is-5by4">
+              <a href="{% url video_3_link %}"><img src="{% static video_3_thumb %}" alt="Image"></a>
+            </figure>
+          </div>
+          <div class="card-content">
+            <div class="media">
+              <div class="media-left">
+                <figure class="image is-48x48">
+                  <img src="{% static mudasir %}" class="circle-img" alt="Image">
+                </figure>
+              </div>
+              <div class="media-content">
+                <p class="title is-5 no-padding"><a href="{% url 'About' %}">{{name}}</a></p>
+                <p class="subtitle is-6">{{brief}}</p>
+              </div>
+            </div>
+            <div class="content">
+              <h1 class="title is-5">{{video_3_title}}</h1>
+              <p>{{video_3_desc}}</p>
+              <time datetime="2020-14-8">{{video_3_date}}</time><br><br>
+              <a href="{% url video_3_link %}" >Start Watching >></a>
+            </div>
+          </div>
         </div>
       </div>
 
-      <div class="content">
-        <h4 class="title">{{video_3_title}}</h4>
-        <p>{{video_3_desc}}</p>
-        <time datetime="2020-14-8">{{video_3_date}}</time>
-      </div>
-      <a href="{% url video_3_link %}" class="button is-danger"
-        >Start Watching >></a
-      >
-    </div>
-  </div>
-
-  <div class="box card">
-    <div class="card-image">
-      <img
-        src="{% static video_2_thumb %}"
-        class="box-img"
-        alt="Image"
-      />
-    </div>
-    <div class="card-content">
-      <div class="media">
-        <div class="media-left">
-          <figure class="image is-48x48">
-            <img src="{% static mudasir %}" alt="Placeholder image" />
-          </figure>
-        </div>
-        <div class="media-content">
-          <p class="title is-4"><a href="{% url 'About' %}">{{name}}</a></p>
-          <p class="subtitle is-6">{{brief}}</p>
+      <div class="column is-4">
+        <div class="card large my-box">
+          <div class="card-image">
+            <figure class="image is-5by4">
+              <a href="{% url video_2_link %}"><img src="{% static video_2_thumb %}" alt="Image"></a>
+            </figure>
+          </div>
+          <div class="card-content">
+            <div class="media">
+              <div class="media-left">
+                <figure class="image is-48x48">
+                  <img src="{% static mudasir %}" class="circle-img" alt="Image">
+                </figure>
+              </div>
+              <div class="media-content">
+                <p class="title is-5 no-padding"><a href="{% url 'About' %}">{{name}}</a></p>
+                <p class="subtitle is-6">{{brief}}</p>
+              </div>
+            </div>
+            <div class="content">
+              <h1 class="title is-5">{{video_2_title}}</h1>
+              <p>{{video_2_desc}}</p>
+              <time datetime="2020-14-8">{{video_2_date}}</time><br><br>
+              <a href="{% url video_2_link %}" >Start Watching >></a>
+            </div>
+          </div>
         </div>
       </div>
 
-      <div class="content">
-        <h4 class="title">{{video_2_title}}</h4>
-        <p>{{video_2_desc}}</p>
-        <time datetime="2020-14-8">{{video_2_date}}</time>
-      </div>
-      <a href="{% url video_2_link %}" class="button is-danger"
-        >Start Watching >></a
-      >
-    </div>
-  </div>
-
-  <div class="box card">
-    <div class="card-image">
-      <img
-        src="{% static video_1_thumb %}"
-        class="box-img"
-        alt="Image"
-      />
-    </div>
-    <div class="card-content">
-      <div class="media">
-        <div class="media-left">
-          <figure class="image is-48x48">
-            <img src="{% static mudasir %}" alt="Placeholder image" />
-          </figure>
-        </div>
-        <div class="media-content">
-          <p class="title is-4"><a href="{% url 'About' %}">{{name}}</a></p>
-          <p class="subtitle is-6">{{brief}}</p>
+      <div class="column is-4">
+        <div class="card large my-box">
+          <div class="card-image">
+            <figure class="image is-5by4">
+              <a href="{% url video_1_link %}"><img src="{% static video_1_thumb %}" alt="Image"></a>
+            </figure>
+          </div>
+          <div class="card-content">
+            <div class="media">
+              <div class="media-left">
+                <figure class="image is-48x48">
+                  <img src="{% static mudasir %}" class="circle-img" alt="Image">
+                </figure>
+              </div>
+              <div class="media-content">
+                <p class="title is-5 no-padding"><a href="{% url 'About' %}">{{name}}</a></p>
+                <p class="subtitle is-6">{{brief}}</p>
+              </div>
+            </div>
+            <div class="content">
+              <h1 class="title is-5">{{video_1_title}}</h1>
+              <p>{{video_1_desc}}</p>
+              <time datetime="2020-14-8">{{video_1_date}}</time><br><br>
+              <a href="{% url video_1_link %}" >Start Watching >></a>
+            </div>
+          </div>
         </div>
       </div>
+      
 
-      <div class="content">
-        <h4 class="title">{{video_1_title}}</h4>
-        <p>{{video_1_desc}}</p>
-        <time datetime="2020-14-8">{{video_1_date}}</time>
-      </div>
-      <a href="{% url video_1_link %}" class="button is-danger"
-        >Start Watching >></a
-      >
     </div>
+
   </div>
 
 </div>
+
+
+
 
 {% endblock %}
