@@ -16,6 +16,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from . import views
+from django.contrib.staticfiles.storage import staticfiles_storage
+from django.views.generic.base import RedirectView
 
 admin.site.site_header = "Tech MUD Admin"
 admin.site.site_title = "Tech MUD Admin Panel"
@@ -36,6 +38,9 @@ urlpatterns = [
     path('videos/', include('videos.urls')),
     path('blogs/', include('blog.urls')),
     path('courses/', include('courses.urls')),
+
+
+    path("ads.txt/", RedirectView.as_view(url=staticfiles_storage.url("ads.txt"))),
 
     # Facebook Link
     path('https://www.facebook.com/techmub/', views.Facebook, name="Facebook_link"),
