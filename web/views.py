@@ -6,7 +6,7 @@ from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth import views as auth_views
 from . import forms
-
+from django.urls import path
 
 
 # Create the Web Views - Mudasir ALi
@@ -19,6 +19,10 @@ def Index(req):
 def About(req):
     return render(req, 'Pages/About.html')
 
+def Handle_404(req, exception):
+    return render(req, 'Pages/404.html', {'link': f'{req.get_host()}{req.path}'})
+
+# User Authentication
 
 def Signup(req):
     form = forms.CreateUserForm()
@@ -53,6 +57,7 @@ def Logout(req):
     return redirect('Index')
 
 
+# Social Media LINKS
 def Facebook(req):
     return redirect('https://www.facebook.com/techmub/')
 

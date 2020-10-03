@@ -59,3 +59,8 @@ urlpatterns = [
     path('https://techmudboy.com/', views.Website, name="Website_link"),
     
 ]
+
+
+
+
+handler404 = 'web.views.Handle_404'
