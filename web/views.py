@@ -19,10 +19,6 @@ def Index(req):
 def About(req):
     return render(req, 'Pages/About.html')
 
-def Contact(req):
-    return render(req, 'Pages/Contact.html')
-
-
 
 def Signup(req):
     form = forms.CreateUserForm()

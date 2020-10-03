@@ -1,7 +1,6 @@
 {% extends 'Must/Must.html' %}
 {% block title %}Tech MUD | Contact{% endblock %}
 {% load static %}
-{% block css_1 %}{% static 'Styles/Pages/Contact/Index.css' %}{%endblock %}
 {% block active_contact %}active{% endblock %} {% block body %}
 
 <section class="hero is-fullheight">
@@ -36,32 +35,35 @@
           </div>
         </div>
         <div class="column is-one-third has-text-left">
-          <div class="field">
-            <label class="label">Name</label>
-            <div class="control">
-              <input class="input is-medium" type="text" />
+          <form method="POST">
+            {% csrf_token %}
+            <div class="field">
+              <label class="label">Name</label>
+              <div class="control">
+                <input class="input is-medium" name="name" type="text" />
+              </div>
             </div>
-          </div>
-          <div class="field">
-            <label class="label">Email</label>
-            <div class="control">
-              <input class="input is-medium" type="text" />
+            <div class="field">
+              <label class="label">Email</label>
+              <div class="control">
+                <input class="input is-medium" name="email" type="text" />
+              </div>
             </div>
-          </div>
-          <div class="field">
-            <label class="label">Message</label>
-            <div class="control">
-              <textarea class="textarea is-medium"></textarea>
+            <div class="field">
+              <label class="label">Message</label>
+              <div class="control">
+                <textarea class="textarea is-medium" name="message"></textarea>
+              </div>
             </div>
-          </div>
-          <div class="control">
-            <button
-              type="submit"
-              class="button is-link is-fullwidth has-text-weight-medium is-medium"
-            >
-              Send Message
-            </button>
-          </div>
+            <div class="control">
+              <button
+                type="submit"
+                class="button is-link is-fullwidth has-text-weight-medium is-medium"
+              >
+                Send Message
+              </button>
+            </div>
+          </form>
         </div>
       </div>
     </div>

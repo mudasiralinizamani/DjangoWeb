@@ -62,11 +62,20 @@
             <a href="{% url 'Signup' %}" class="btn btn-info my-btn">Signup</a>
             <a href="{% url 'Login' %}" class="btn btn-secondary my-btn">Login</a>
             {% endif %}
-          
           </div>
         </div>
       </nav>
     </header>
+    {% if messages %}
+      {% for message in messages %}
+      <div class="alert alert-{{message.tags}} alert-dismissible fade show" role="alert">
+        <strong>Message: </strong> {{message}}
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      {% endfor %}
+    {% endif %}
 
     {% block body %} 
     

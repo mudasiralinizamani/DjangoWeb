@@ -18,6 +18,7 @@ from django.urls import path, include
 from . import views
 from django.contrib.staticfiles.storage import staticfiles_storage
 from django.views.generic.base import RedirectView
+import app.views as app_views
 
 admin.site.site_header = "Tech MUD Admin"
 admin.site.site_title = "Tech MUD Admin Panel"
@@ -27,7 +28,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.Index, name='Index'),
     path('about/', views.About, name='About'),
-    path('contact/', views.Contact, name='Contact'),
+    path('contact/', app_views.Contact, name='Contact'),
     path('signup/', views.Signup, name="Signup"),
     path('login/', views.Login, name="Login"),
     path('logout/', views.Logout, name="Logout"),
