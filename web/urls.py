@@ -29,11 +29,8 @@ urlpatterns = [
     path('', views.Index, name='Index'),
     path('about/', views.About, name='About'),
     path('contact/', app_views.Contact, name='Contact'),
-    path('signup/', views.Signup, name="Signup"),
-    path('login/', views.Login, name="Login"),
-    path('logout/', views.Logout, name="Logout"),
 
-    path('profile/', include('accounts.urls')),
+    path('accounts/', include('accounts.urls')),
 
 
     path('videos/', include('videos.urls')),
