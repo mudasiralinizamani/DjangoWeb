@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AAAA,aAAa,CAAC;EACZ,MAAM,EAAE,IAAI;EACZ,KAAK,EAAE,KAAK;EACZ,aAAa,EAAE,EAAE;CAClB;;AAED,AAAA,SAAS,CAAC;EACR,WAAW,EAAE,IAAI;CAClB;;AAED,AAAA,QAAQ,CAAC;EACP,aAAa,EAAE,EAAE;CAClB;;AAED,AAAA,gBAAgB,CAAA;EACd,KAAK,EAAE,GAAG;CACX",
-    "sources": [
-        "Blogs.scss"
-    ],
-    "names": [],
-    "file": "Blogs.css"
-}

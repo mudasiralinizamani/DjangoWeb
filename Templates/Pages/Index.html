@@ -9,10 +9,27 @@
 
 
 {% block body %}
-<div class="top">
-  <h1 class="title" style="color: white">Explore Programming</h1>
-  <h2 class="subtitle" style="color: white">& Technology</h2>
-</div>
+<section id="top">
+  <div id="title-1">
+    <h2 id="title-1-heading-1">Explore Programming</h2>
+    <h3 id="title-1-heading-2">& Programming</h3>
+  </div>
+  <div id="title-2">
+    <div class="flex-right-side">
+      {% if user.is_authenticated %}
+      <h3>Hi, {{ user|title }}!</h3>
+      <a href="">Courses</a>
+      <a href="">Blogs</a>
+      <!-- <a href="">Write a Blog</a> -->
+      {% else %}
+      <h3>Hi</h3>
+      <a href="">Courses</a>
+      <a href="">Blogs</a>
+      {% endif %}
+    </div>
+  </div>
+  <div class="black-overlay"></div>
+</section>
 
 <div class="center">
   <div class="ad">
@@ -107,6 +124,9 @@
 
 {% endblock %}
 
+{% block other_script %}
 
-<!-- Google Adsense -->
-<script data-ad-client="ca-pub-9694874056946796" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script src="{% static 'Js/jquery.min.js' %}"></script>
+<script src="{% static 'Js/Pages/Index.js' %}"></script>
+
+{% endblock %}
