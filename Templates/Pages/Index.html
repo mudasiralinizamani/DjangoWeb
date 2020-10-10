@@ -12,7 +12,7 @@
 <section id="top">
   <div id="title-1">
     <h2 id="title-1-heading-1">Explore Programming</h2>
-    <h3 id="title-1-heading-2">& Programming</h3>
+    <h3 id="title-1-heading-2">& Technology</h3>
   </div>
   <div id="title-2">
     <div class="flex-right-side">
@@ -23,8 +23,8 @@
       <!-- <a href="">Write a Blog</a> -->
       {% else %}
       <h3>Hi</h3>
-      <a href="">Courses</a>
-      <a href="">Blogs</a>
+      <a href="{% url 'Courses' %}">Courses</a>
+      <a href="{% url 'Blogs' %}">Blogs</a>
       {% endif %}
     </div>
   </div>

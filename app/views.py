@@ -10,7 +10,7 @@ def Contact(req):
         Email = req.POST.get('email')
         Message = req.POST.get('message')
 
-        if len(Name) < 3 or len(Email) < 4 or len(Name) < 6:
+        if len(Name) < 2 or len(Email) < 4 or '@' not in Email or len(Message) < 3:
             messages.error(req, 'Plz, Fill the fields Correctly.')
             
         else:
