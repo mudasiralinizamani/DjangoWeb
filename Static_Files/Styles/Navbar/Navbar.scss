@@ -12,9 +12,14 @@
   font-style: italic !important;
 }
 
-.my-btn {
+.my-navbar-btn {
   margin-right: 0.5em !important;
+  border-radius: 100px !important;
+  text-transform: uppercase;
+  font-size: 12px !important;
+  letter-spacing: .2rem;
 }
+
 
 .form-inline {
   display: inline-block;
@@ -153,5 +158,12 @@
   }
   .input-group {
     width: 100%;
+  }
+}
+
+@media (max-width: 800px) {
+  .my-navbar-btn {
+    margin-top: 0.5em !important;
+
   }
 }
