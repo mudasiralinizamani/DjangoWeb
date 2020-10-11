@@ -17,7 +17,7 @@
   <div id="title-2">
     <div class="flex-right-side">
       {% if user.is_authenticated %}
-      <h3>Hi, {{ user|title }}!</h3>
+      <h3>Hi, {{ user.username|title }}!</h3>
       <a href="">Courses</a>
       <a href="">Blogs</a>
       <!-- <a href="">Write a Blog</a> -->
