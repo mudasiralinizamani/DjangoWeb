@@ -6,8 +6,6 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.forms import UserCreationForm, User
 
 
-
-
 # Create your views here.
 
 
@@ -15,8 +13,8 @@ def Profile(req):
     return render(req, 'Accounts/Admin.html')
 
 def Signup(req):
-    if User.is_authenticated():
-        messages.INFO(req, f'You are already Authenticated, {User.username}!')
+    if  req.user.is_authenticated:
+        messages.info(req, f'You are already Authenticated, {req.user.username}!')
         return  redirect('Index')
     else:
         form = forms.CreateUserForm()
@@ -32,8 +30,8 @@ def Signup(req):
         return render(req, 'Accounts/Register.html', Content)
 
 def Login(req):
-    if User.is_authenticated():
-        messages.INFO(req, f'You are already Logedin, {User.username}!')
+    if  req.user.is_authenticated:
+        messages.info(req, f'You are already Login, {req.user.username}!')
         return  redirect('Index')
     else:
         if req.method == 'POST':
