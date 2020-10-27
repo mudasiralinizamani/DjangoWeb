@@ -32,12 +32,8 @@ ALLOWED_HOSTS = ['127.0.0.1', 'techmudboy.com']
 
 # Application definition
 
-INSTALLED_APPS = [
-    'app.apps.AppConfig',
-    'accounts.apps.AccountsConfig',
-    'blog.apps.BlogConfig',
-    'courses.apps.CoursesConfig',
-    'videos.apps.VideosConfig',
+# These are the apps that django gives us as default - Mudasir Ali
+DEFAULT_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -45,6 +41,25 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 ]
+
+# These are the local apps thats I've created - Mudasir Ali
+LOCAL_APPS = [
+    'app.apps.AppConfig',
+    'accounts.apps.AccountsConfig',
+    'blog.apps.BlogConfig',
+    'courses.apps.CoursesConfig',
+    'videos.apps.VideosConfig',
+]
+
+# These are the third party apps - Mudasir Ali
+THIRD_PARTY_APPS = [
+    'crispy_forms'
+]
+
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+INSTALLED_APPS = DEFAULT_APPS + LOCAL_APPS + THIRD_PARTY_APPS
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

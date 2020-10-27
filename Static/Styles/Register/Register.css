@@ -1,67 +1,102 @@
-body,
-html {
-  height: 94%;
-  background: #7abecc !important;
+:root {
+  --brandColor: hsl(166, 67%, 51%);
+  --background: rgb(247, 247, 247);
+  --textDark: hsla(0, 0%, 0%, 0.66);
+  --textLight: hsla(0, 0%, 0%, 0.33);
 }
 
-.user_card {
-  width: 350px;
-  margin-top: auto;
-  margin-bottom: auto;
-  background: #74cfbf;
-  position: relative;
+.va {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  padding: 10px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  border-radius: 5px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.form_container {
-  margin-top: 20px;
+body {
+  background: var(--background) !important;
+  height: 140vh;
+  color: var(--textDark) !important;
 }
 
-#form-title {
-  color: #fff;
+.field:not(:last-child) {
+  margin-bottom: 1rem;
 }
 
-.login_btn {
-  width: 100%;
-  background: #33ccff !important;
-  color: white !important;
+.register {
+  margin-top: 10rem;
+  background: white;
+  border-radius: 10px;
 }
 
-.login_btn:focus {
-  -webkit-box-shadow: none !important;
-          box-shadow: none !important;
-  outline: 0px !important;
+.left,
+.right {
+  padding: 4.5rem;
 }
 
-.login_container {
-  padding: 0 2rem;
+.left {
+  border-right: 5px solid var(--background);
 }
 
-.input-group-text {
-  background: #f7ba5b !important;
-  color: white !important;
-  border: 0 !important;
-  border-radius: 0.25rem 0 0 0.25rem !important;
+.left .title {
+  font-weight: 800;
+  letter-spacing: -2px;
 }
 
-.input_user,
-.input_pass:focus {
-  -webkit-box-shadow: none !important;
-          box-shadow: none !important;
-  outline: 0px !important;
+.left .colored {
+  color: var(--brandColor);
+  font-weight: 500;
+  margin-top: 1rem !important;
+  letter-spacing: -1px;
+}
+
+.left p {
+  color: var(--textLight);
+  font-size: 1.15rem;
+}
+
+.right .title {
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.right .description {
+  margin-top: 1rem;
+  margin-bottom: 1rem !important;
+  color: var(--textLight);
+  font-size: 1.15rem;
+}
+
+.right small {
+  color: var(--textLight);
+}
+
+input {
+  font-size: 1rem;
+}
+
+input:focus {
+  border-color: var(--brandColor) !important;
+  -webkit-box-shadow: 0 0 0 1px var(--brandColor) !important;
+          box-shadow: 0 0 0 1px var(--brandColor) !important;
+}
+
+.fab,
+.fas {
+  color: var(--textLight);
+  margin-right: 1rem;
+}
+
+label {
+  display: none !important;
+}
+
+.form-text {
+  display: none !important;
+}
+
+.requiredField {
+  display: none;
 }
 /*# sourceMappingURL=Register.css.map */

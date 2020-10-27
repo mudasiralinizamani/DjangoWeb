@@ -4,6 +4,8 @@ from django import forms
 
 
 class CreateUserForm(UserCreationForm):
+    first_name = forms.CharField(max_length=50, help_text="Firstname")
+    last_name = forms.CharField(max_length=50, help_text="Lastname")
     class Meta:
         model = User
-        fields = ['username', 'email', 'password1', 'password2']
+        fields = ['username', 'first_name', 'last_name', 'email', 'password1', 'password2']

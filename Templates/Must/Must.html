@@ -50,7 +50,7 @@
           <div class="navbar-nav ml-auto">
             {% if user.is_authenticated %}
             <div class="nav-item dropdown">
-              <a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle user-action"><img src="{% static 'Pics/Logos/User.jpg' %}" class="avatar" alt="Avatar">{{ user.username }} <b class="caret"></b></a>
+              <a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle user-action"><img src="{% static 'Pics/Logos/User.jpg' %}" class="avatar" alt="Avatar">{{ user.first_name }} {{user.last_name}} <b class="caret"></b></a>
               <div class="dropdown-menu">
                 <a href="{% url 'Profile' %}" class="dropdown-item"><i class="fa fa-user-o"></i> Profile</a></a>
                 <!-- <a href="#" class="dropdown-item"><i class="fa fa-calendar-o"></i> Calendar</a></a> -->
@@ -84,7 +84,7 @@
 
     <footer>
       <div id="bottom-div">
-        <p id="down-p">© techmudboy.com 2020 - 2021</p>
+        <p id="down-p">&copy; techmudboy.com All Rights Reserved.</p>
       </div>
     </footer>
   </body>
