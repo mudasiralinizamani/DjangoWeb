@@ -1,0 +1,123 @@
+.video-title {
+  font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    "Helvetica", "Arial", sans-serif;
+
+  font-weight: 300;
+  font-size: 1.7rem;
+}
+
+.sec-1 {
+}
+
+.video-div {
+  margin: 5px 2px;
+}
+
+.Video {
+  width: 100%;
+  height: 75vh;
+
+}
+
+pre{
+  background-color: #15222ddb !important;
+}
+
+
+#container-2 {
+  margin-left: 5%;
+  margin-right: 1%;
+  margin-bottom: 3vh;
+  display: flex;
+  flex-direction: column;
+}
+
+#description {
+  height: 40vh;
+}
+
+.code-div {
+  background-color: #15222ddb !important;
+  // height: 60vh;
+  font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+}
+
+.my-btn {
+  text-decoration: none;
+}
+
+.my-btn:hover {
+  text-decoration: none;
+}
+
+.scroll {
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+
+
+.code {
+  margin: 6px 2px !important;
+}
+
+
+/* Coding Text Colours */
+
+.space {
+  margin-left: 2.1rem !important;
+}
+
+.space-2 {
+  margin-left: 4.4rem;
+}
+
+.space-3 {
+  margin-left: 6.7rem;
+}
+.space-4 {
+  margin-left: 8.1rem;
+}
+.space-5 {
+  margin-left: 10.13rem;
+}
+
+
+// Colours
+
+// HTML
+$Html_Colours: (
+  element: #ff5050,
+  class: #f36ef3,
+  breaket: rgb(186, 210, 219),
+  string: #37c537,
+);
+
+
+// CSS
+
+$Css_Colours: (
+  selector: #ca4eca,
+  element: #ff5050,
+  property: rgb(246, 240, 240),
+  number: rgb(241, 161, 11),
+  function: #7171f5,
+);
+
+
+
+@media only screen and (max-width: 700px) {
+  #Video_div {
+    width: 100%;
+  }
+  
+  .code-hero-body{
+    padding: 0;
+  }
+
+  .code-container {
+    padding: 0;
+  }
+
+}
