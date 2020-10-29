@@ -1,542 +1,93 @@
-{% extends 'Must/Must.html' %}
+{% extends 'Must/Must.html' %} 
 {% block title %}Tech MUD | Projects{% endblock %}
-
 {% load static %}
-
-
+{% block css_1 %} {% static 'Styles/Pages/Projects/Projects.css' %} {% endblock %}
 {% block active_projects %}active{% endblock %}
 
 
+
 {% block body %}
+<section class="container">
+  <!-- Here will be the tags aside bar -->
+  <div class="column is-11">
+	<div class="column is-3">
+		<a class="button is-primary is-block is-alt is-large" href="#"
+		  >New Post</a
+		>
+	</div>
 
-{% endblock %}
-
-
-<!DOCTYPE html>
-<html lang="en" >
-  <head>
-    <meta charset="UTF-8">
-    <title>Cheatsheet Concept</title>
-    <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-    <!-- Bulma Version 0.9.0-->
-    <link rel='stylesheet' href='https://unpkg.com/bulma@0.9.0/css/bulma.min.css'>
-    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/overlayscrollbars/1.9.1/css/OverlayScrollbars.min.css'>
-    <link rel='stylesheet' href='https://kingsora.github.io/OverlayScrollbars/etc/os-theme-thin-dark.css'>	  
-    <link rel='stylesheet' href="../css/prism.css">
-    <link rel="stylesheet" href="../css/cheatsheet.css">
-    <script src="https://kit.fontawesome.com/7dc3015a44.js" crossorigin="anonymous"></script>
-  </head>
-  <body>
-    <section class="hero is-primary">
-      <div class="hero-body">
-        <div class="columns">
-          <div class="column is-12">
-            <div class="container content">
-              <i class="is-large fab fa-discord"></i>
-              <i class="is-large fas fa-code"></i>
-              <h1 class="title">Code <em>All</em> The Things</h1>
-              <h3 class="subtitle">
-              Collection of code goodies for next-level dev
-              </h3>
-              <a href="https://github.com/BulmaTemplates/bulma-templates" target="_blank" class="button is-primary is-large">
-                <span class="icon">
-                  <i class="fab fa-github"></i>
-                </span>
-                <span>Github</span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="section">
-      <div class="container">
-        <div class="columns">
-          <div class="column is-3">
-            <aside class="is-medium menu">
-          <p class="menu-label">
-            categories
-          </p>
-          <ul class="menu-list">
-            <li class="is-right"><a href="#const" class="is-active"><i class="fab fa-css3-alt"></i> CSS</a></li>
-            <li><a href="#let" class="is-active"><i class="fab fa-js"></i> JS</a></li>
-            <li><a href="#let" class="is-active"><i class="fab fa-html5"></i> HTML</a></li>
-          </ul>
-              <p class="menu-label">
-                More to read...
+		<!-- Article Start -->
+      <div class="box content">
+        <article class="post">
+          <h4>
+            <a href="{{repo1_url}}" target="_blank"
+              >A-Pathfinding-Visualization</a
+            >
+          </h4>
+          <hr />
+          <h5>Description</h5>
+          <p>{{repo1_desc}}</p>
+          <table class="table table-bordered">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">Language</th>
+                <th scope="col">Created-at</th>
+                <th scope="col">Forks</th>
+                <th scope="col">Open Issue</th>
+                <th scope="col">Size</th>
+                <th scope="col">Stars</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <!-- Language -->
+                <td>{{repo.language}}</td>
+                <!-- Created-at -->
+                <td>{{repo.created_at|slice:10}}</td>
+                <!-- Forks -->
+                <td>{{repo.forks_count}}</td>
+                <!-- Open Issue -->
+                <td>{{repo.open_issues_count}}</td>
+                <!-- Size -->
+                {% if repo.size|length > 1000 %}
+                <td>{{repo.size}} MB</td>
+                {% elif repo.size|length > 1000000 %}
+                <td>{{repo.size}} GB</td>
+                {% else %}
+                <td>{{repo.size}} KB</td>
+                {% endif %}
+                <!-- Stars -->
+                <td>{{repo.stargazers_count}}</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="media">
+            <div class="media-left">
+              <p class="image is-32x32">
+                <a href="{{repo.owner.html_url}}" target="_blank"
+                  ><img src="{{repo.owner.avatar_url}}"
+                /></a>
               </p>
-              <ul class="menu-list">
-                <li><span class="tag is-white is-medium">Lorem</span></li>
-                <li><span class="tag is-white is-medium">Ipsum</span></li>
-                <li><span class="tag is-white is-medium">Dolor</span></li>
-                <li><span class="tag is-white is-medium">Animi</span></li>
-                <li><span class="tag is-white is-medium">Eximi</span></li>
-                <li><span class="tag is-white is-medium">Nullius</span></li>
-                <li><span class="tag is-white is-medium">Oxipi</span></li>
-                <li><span class="tag is-white is-medium">Vultus</span></li>
-                <li><span class="tag is-white is-medium">Voluptatis</span></li>
-                <li><span class="tag is-white is-medium">Exomarphis</span></li>
-                <li><span class="tag is-white is-medium">Finimi</span></li>
-                <li><span class="tag is-white is-medium">Aenigma</span></li>
-                <li><span class="tag is-white is-medium">Arkham</span></li>
-                <li><span class="tag is-white is-medium">Blue</span></li>
-                <li><span class="tag is-white is-medium">Medium</span></li>
-              </ul>
-            </aside>
-          </div>
-          <div class="column is-9">
-            <div class="content is-medium">
-          <h3 class="title is-3">Snippets ¯\_(ツ)_/¯</h3>
-              <div class="box">
-                <h4 id="const" class="title is-3">const</h4>
-                <article class="message is-primary">
-                  <span class="icon has-text-primary">
-                  <i class="fab fa-js"></i>
-                  </span>
-                  <div class="message-body">
-                    Block-scoped. Cannot be re-assigned. Not immutable.
-                  </div>
-                </article>
-              <pre><code class="language-javascript">const test = 'test';</code></pre>
             </div>
-            <div class="box">
-              <h4 id="let" class="title is-3">let</h4>
-              <article class="message is-primary">
-                <span class="icon has-text-primary">
-                  <i class="fas fa-info-circle"></i>
-                </span>
-                <div class="message-body">
-                  Block-scoped. Can be re-assigned.
-                </div>
-              </article>
-            <pre><code class="language-javascript">let i = 0;</code></pre>
-          </div>
-          <h3 class="title is-3">More to Come...</h3>
-          <div class="box">
-            <h4 id="lorem" class="title is-4">More to come...</h4>
-            <article class="message is-primary">
-              <span class="icon has-text-primary">
-                <i class="fas fa-info-circle"></i>
-              </span>
-              <div class="message-body">
-                Lorem ipsum dolor sit amet, mea ne viderer veritus menandri, id scaevola gloriatur instructior sit.
+            <div class="media-content">
+              <div class="content">
+                <p>
+                  <a href="{{repo.owner.html_url}}" target="_blank"
+                    >{{user1_name}}</a
+                  >
+                  Uploaded 25 Sep, 2020 &nbsp;
+                  <span class="tag">Repository</span>
+                </p>
               </div>
-            </article>
-          <pre><code class="language-javascript">let i = 0;</code></pre>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-</section>
-<footer class="footer">
-<section class="section">
-  <div class="container">
-    <div class="columns is-multiline">
-      <div class="column is-one-third">
-        <article class="notification media has-background-white">
-          <figure class="media-left">
-            <span class="icon">
-              <i class="has-text-warning fas fa-columns fa-lg"></i>
-            </span>
-          </figure>
-          <div class="media-content">
-            <div class="content">
-              <h1 class="title is-size-4">Columns</h1>
-              <p class="is-size-5 subtitle">
-                The power of <strong>Flexbox</strong> in a simple interface
-              </p>
             </div>
           </div>
-        </article>
-      </div>
-      <div class="column is-one-third">
-        <article class="notification has-background-white media">
-          <figure class="media-left">
-            <span class="icon has-text-info">
-              <i class="fab fa-lg fa-wpforms"></i>
-            </span>
-          </figure>
-          <div class="media-content">
-            <div class="content">
-              <h1 class="title is-size-4">Form</h1>
-              <p class="is-size-5 subtitle">
-                The indispensable <strong>form controls</strong>, designed for maximum clarity
-              </p>
-            </div>
-          </div>
-        </article>
-      </div>
-      <div class="column is-one-third">
-        <article class="notification has-background-white media">
-          <figure class="media-left">
-            <span class="icon has-text-danger">
-              <i class="fas fa-lg fa-cubes"></i>
-            </span>
-          </figure>
-          <div class="media-content">
-            <div class="content">
-              <h1 class="title is-size-4">Components</h1>
-              <p class="is-size-5 subtitle">
-                Advanced multi-part components with lots of possibilities
-              </p>
-            </div>
-          </div>
-        </article>
-      </div>
-      <div class="column is-one-third">
-        <article class="notification has-background-white media">
-          <figure class="media-left">
-            <span class="icon has-text-grey">
-              <i class="fas fa-lg fa-cogs"></i>
-            </span>
-          </figure>
-          <div class="media-content">
-            <div class="content">
-              <h1 class="title is-size-4">Modifiers</h1>
-              <p class="is-size-5 subtitle">
-                An <strong>easy-to-read</strong> naming system designed for humans
-              </p>
-            </div>
-          </div>
-        </article>
-      </div>
-      <div class="column is-one-third">
-        <article class="notification has-background-white media">
-          <figure class="media-left">
-            <span class="icon has-text-primary">
-              <i class="fas fa-lg fa-warehouse"></i>
-            </span>
-          </figure>
-          <div class="media-content">
-            <div class="content">
-              <h1 class="title is-size-4">Layout</h1>
-              <p class="is-size-5 subtitle">
-                Design the <strong>structure</strong> of your webpage with these CSS classes
-              </p>
-            </div>
-          </div>
-        </article>
-      </div>
-      <div class="column is-one-third">
-        <article class="notification has-background-white media">
-          <figure class="media-left">
-            <span class="icon has-text-danger">
-              <i class="fas fa-lg fa-cube"></i>
-            </span>
-          </figure>
-          <div class="media-content">
-            <div class="content">
-              <h1 class="title is-size-4">Elements</h1>
-              <p class="is-size-5 subtitle">
-                Essential interface elements that only require a <strong>single CSS class</strong>
-              </p>
-            </div>
-          </div>
-        </article>
-      </div>
-    </div>
+		</article>
+	  </div>
+	  <!-- Article End -->
+
+	  
+	  
+	  
   </div>
 </section>
-<hr>
-<div class="columns is-mobile is-centered">
-  <div class="field is-grouped is-grouped-multiline">
-    <div class="control">
-      <div class="tags has-addons"><a class="tag is-link" href="https://github.com/BulmaTemplates/bulma-templates">Bulma Templates</a>
-      <span class="tag is-info">MIT license</span>
-    </div>
-  </div>
-  <div class="control">
-    <div class="tags has-addons">
-      <span class="tag is-dark">based on a pen</span>
-      <span class="tag has-addons is-warning"><a href="https://codepen.io/melanieseltzer/pen/odOXWM"><i class="fab fa-lg fa-codepen"></i></a></span>
-    </div>
-  </div>
-</div>
-</div>
-
-</footer>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/prism.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/overlayscrollbars/1.9.1/js/OverlayScrollbars.min.js'></script>  
-    
-<script>
-  window.addEventListener('resize', () => {
-  const divs = document.querySelectorAll(".menu-list");
-  if (window.innerWidth < 768){
-    divs.forEach(div => div.classList.add("tags"));
-  }
-  else {
-    divs.forEach(div => div.classList.remove("tags"));
-  }
-});
-  
-  document.addEventListener("DOMContentLoaded", function() {
-	//The first argument are the elements to which the plugin shall be initialized
-	//The second argument has to be at least a empty object or a object with your desired options
-	OverlayScrollbars(document.querySelectorAll("body"), { });
-});
-  
-</script>  
-</body>
-</html>
-
-
-
-<!-- Forums  -->
-
-
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Forum - Free Bulma template</title>
-		<link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
-		<!-- Bulma Version 0.9.0-->
-		<link rel="stylesheet" href="https://unpkg.com/bulma@0.9.0/css/bulma.min.css" />
-		<link rel="stylesheet" type="text/css" href="../css/forum.css">
-	</head>
-	<body>
-		<nav class="navbar is-white topNav">
-			<div class="container">
-				<div class="navbar-brand">
-					<a class="navbar-item" href="../">
-						<img src="../images/bulma.png" width="112" height="28">
-					</a>
-					<div class="navbar-burger burger" data-target="topNav">
-						<span></span>
-						<span></span>
-						<span></span>
-					</div>
-				</div>
-				<div id="topNav" class="navbar-menu">
-					<div class="navbar-start">
-						<a class="navbar-item" href="cover.html">Home</a>
-						<a class="navbar-item" href="landing.html">Landing</a>
-						<a class="navbar-item" href="blog.html">Blog</a>
-						<a class="navbar-item" href="instaAlbum.html">Album</a>
-						<a class="navbar-item" href="kanban[search].html">Kanban</a>
-						<a class="navbar-item" href="search.html">Search</a>
-						<a class="navbar-item" href="tabs.html">Tabs</a>
-					</div>
-					<div class="navbar-end">
-						<div class="navbar-item">
-							<div class="field is-grouped">
-								<p class="control">
-									<a class="button is-small">
-										<span class="icon">
-											<i class="fa fa-user-plus"></i>
-										</span>
-										<span>
-											Register
-										</span>
-									</a>
-								</p>
-								<p class="control">
-									<a class="button is-small is-info is-outlined">
-										<span class="icon">
-											<i class="fa fa-user"></i>
-										</span>
-										<span>Login</span>
-									</a>
-								</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</nav>
-		<nav class="navbar is-white">
-			<div class="container">
-				<div class="navbar-menu">
-					<div class="navbar-start">
-						<a class="navbar-item is-active" href="#">Popular</a>
-						<a class="navbar-item" href="#">Recent</a>
-						<a class="navbar-item" href="#">Rising</a>
-					</div>
-					<div class="navbar-end">
-						<div class="navbar-item">
-							<input class="input" type="search" placeholder="Search forum...">
-						</div>
-					</div>
-				</div>
-			</div>
-		</nav>
-		<section class="container">
-			<div class="columns">
-				<div class="column is-3">
-					<a class="button is-primary is-block is-alt is-large" href="#">New Post</a>
-					<aside class="menu">
-						<p class="menu-label">
-							Tags
-						</p>
-						<ul class="menu-list">
-							<li><span class="tag is-primary is-medium ">Dashboard</span></li>
-							<li><span class="tag is-link is-medium ">Customers</span></li>
-							<li><span class="tag is-light is-danger is-medium ">Authentication</span></li>
-							<li><span class="tag is-dark is-medium ">Payments</span></li>
-							<li><span class="tag is-success is-medium ">Transfers</span></li>
-							<li><span class="tag is-warning is-medium ">Balance</span></li>
-							<li><span class="tag is-medium ">Question</span></li>
-						</ul>
-					</aside>
-				</div>
-				<div class="column is-9">
-					<div class="box content">
-						<article class="post">
-							<h4>Bulma: How do you center a button in a box?</h4>
-							<div class="media">
-								<div class="media-left">
-									<p class="image is-32x32">
-										<img src="http://bulma.io/images/placeholders/128x128.png">
-									</p>
-								</div>
-								<div class="media-content">
-									<div class="content">
-										<p>
-											<a href="#">@jsmith</a> replied 34 minutes ago &nbsp;
-											<span class="tag">Question</span>
-										</p>
-									</div>
-								</div>
-								<div class="media-right">
-									<span class="has-text-grey-light"><i class="fa fa-comments"></i> 1</span>
-								</div>
-							</div>
-						</article>
-						<article class="post">
-							<h4>How can I make a bulma button go full width?</h4>
-							<div class="media">
-								<div class="media-left">
-									<p class="image is-32x32">
-										<img src="http://bulma.io/images/placeholders/128x128.png">
-									</p>
-								</div>
-								<div class="media-content">
-									<div class="content">
-										<p>
-											<a href="#">@red</a> replied 40 minutes ago &nbsp;
-											<span class="tag">Question</span>
-										</p>
-									</div>
-								</div>
-								<div class="media-right">
-									<span class="has-text-grey-light"><i class="fa fa-comments"></i> 0</span>
-								</div>
-							</div>
-						</article>
-						<article class="post">
-							<h4>TypeError: Data must be a string or a buffer when trying touse vue-bulma-tabs</h4>
-							<div class="media">
-								<div class="media-left">
-									<p class="image is-32x32">
-										<img src="http://bulma.io/images/placeholders/128x128.png">
-									</p>
-								</div>
-								<div class="media-content">
-									<div class="content">
-										<p>
-											<a href="#">@jsmith</a> replied 53 minutes ago &nbsp;
-											<span class="tag">Question</span>
-										</p>
-									</div>
-								</div>
-								<div class="media-right">
-									<span class="has-text-grey-light"><i class="fa fa-comments"></i> 13</span>
-								</div>
-							</div>
-						</article>
-						<article class="post">
-							<h4>How to vertically center elements in Bulma?</h4>
-							<div class="media">
-								<div class="media-left">
-									<p class="image is-32x32">
-										<img src="http://bulma.io/images/placeholders/128x128.png">
-									</p>
-								</div>
-								<div class="media-content">
-									<div class="content">
-										<p>
-											<a href="#">@brown</a> replied 3 hours ago &nbsp;
-											<span class="tag">Question</span>
-										</p>
-									</div>
-								</div>
-								<div class="media-right">
-									<span class="has-text-grey-light"><i class="fa fa-comments"></i> 2</span>
-								</div>
-							</div>
-						</article>
-						<article class="post">
-							<h4>I'm trying to use hamburger menu on bulma css, but it doesn't work. What is wrong?</h4>
-							<div class="media">
-								<div class="media-left">
-									<p class="image is-32x32">
-										<img src="http://bulma.io/images/placeholders/128x128.png">
-									</p>
-								</div>
-								<div class="media-content">
-									<div class="content">
-										<p>
-											<a href="#">@hamburgler</a> replied 5 hours ago &nbsp;
-											<span class="tag">Question</span>
-										</p>
-									</div>
-								</div>
-								<div class="media-right">
-									<span class="has-text-grey-light"><i class="fa fa-comments"></i> 2</span>
-								</div>
-							</div>
-						</article>
-						<article class="post">
-							<h4>How to make tiles wrap with Bulma CSS?</h4>
-							<div class="media">
-								<div class="media-left">
-									<p class="image is-32x32">
-										<img src="http://bulma.io/images/placeholders/128x128.png">
-									</p>
-								</div>
-								<div class="media-content">
-									<div class="content">
-										<p>
-											<a href="#">@rapper</a> replied 3 hours ago &nbsp;
-											<span class="tag">Question</span>
-										</p>
-									</div>
-								</div>
-								<div class="media-right">
-									<span class="has-text-grey-light"><i class="fa fa-comments"></i> 2</span>
-								</div>
-							</div>
-						</article>
-					</div>
-				</div>
-			</div>
-		</section>
-		<footer class="footer">
-			<div class="container">
-				<div class="content has-text-centered">
-					<div class="columns is-mobile is-centered">
-						<div class="field is-grouped is-grouped-multiline">
-							<div class="control">
-								<div class="tags has-addons">
-									<a class="tag is-link" href="https://github.com/BulmaTemplates/bulma-templates">Bulma Templates</a>
-									<span class="tag is-light">Daniel Supernault</span>
-								</div>
-							</div>
-							<div class="control">
-								<div class="tags has-addons">
-									<a class="tag is-link">The source code is licensed</a>
-									<span class="tag is-light">MIT &nbsp;<i class="fa fa-github"></i></span>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</footer>
-		<script async type="text/javascript" src="../js/bulma.js"></script>
+{% endblock %}
