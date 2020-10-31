@@ -5,4 +5,5 @@ from . import views
 
 urlpatterns = [
     path('', views.Projects, name='Projects'),
+    path('post-repo/', views.Post_repo, name='Post_Repo'),
 ]

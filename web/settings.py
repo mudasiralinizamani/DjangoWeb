@@ -25,7 +25,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '@+qbb1ohv$i7mj8h^#&y@x8j$_9kc9r*5^1m$xr2ynu&xm0+y8'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1', 'techmudboy.com']
 
@@ -49,6 +49,7 @@ LOCAL_APPS = [
     'blog.apps.BlogConfig',
     'courses.apps.CoursesConfig',
     'videos.apps.VideosConfig',
+    'projects.apps.ProjectsConfig'
 ]
 
 # These are the third party apps - Mudasir Ali
