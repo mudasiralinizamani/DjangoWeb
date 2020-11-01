@@ -16,87 +16,20 @@
 		>
 	</div>
 
-		<!-- Article Start -->
-      <div class="box content">
-        <article class="post">
-          <h4>
-            <a href="{{repo.html_url}}" target="_blank"
-              >{{repo.name}}</a
-            >
-          </h4>
-          <hr />
-          <h5>Description</h5>
-          <p>{{repo.description}}</p>
-          <table class="table table-bordered">
-            <thead class="thead-dark">
-              <tr>
-                <th scope="col">Language</th>
-                <th scope="col">Created-at</th>
-                <th scope="col">Forks</th>
-                <th scope="col">Open Issue</th>
-                <th scope="col">Size</th>
-                <th scope="col">Stars</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <!-- Language -->
-                <td>{{repo.language}}</td>
-                <!-- Created-at -->
-                <td>{{repo.created_at|slice:10}}</td>
-                <!-- Forks -->
-                <td>{{repo.forks_count}}</td>
-                <!-- Open Issue -->
-                <td>{{repo.open_issues_count}}</td>
-                <!-- Size -->
-                {% if repo.size|length > 1000 %}
-                <td>{{repo.size}} MB</td>
-                {% elif repo.size|length > 1000000 %}
-                <td>{{repo.size}} GB</td>
-                {% else %}
-                <td>{{repo.size}} KB</td>
-                {% endif %}
-                <!-- Stars -->
-                <td>{{repo.stargazers_count}}</td>
-              </tr>
-            </tbody>
-          </table>
-          <div class="media">
-            <div class="media-left">
-              <p class="image is-32x32">
-                <a href="{{repo.owner.html_url}}" target="_blank"
-                  ><img src="{{repo.owner.avatar_url}}"
-                /></a>
-              </p>
-            </div>
-            <div class="media-content">
-              <div class="content">
-                <p>
-                  <a href="{{repo.owner.html_url}}" target="_blank"
-                    >{{user1_name}}</a
-                  >
-                  Uploaded 25 Sep, 2020 &nbsp;
-                  <span class="tag">Repository</span>
-                </p>
-              </div>
-            </div>
-          </div>
-		</article>
-	  </div>
-    <!-- Article End -->
+		
     
     {% for repo in db_repo %}
     <!-- Article Start -->
     <div class="box content">
       <article class="post">
         <h4>
-          <a href="{{repo.Repo_Url}}" target="_blank"
-            >{{repo.Repo_Name}}</a
+          <a href="{{repo.repo_url}}" target="_blank"
+            >{{repo.repo_name}}</a
           >
         </h4>
         <hr />
         <h5>Description</h5>
-        <p>{{repo.Repo_Desc}}</p>
+        <p>{{repo.repo_desc}}</p>
         <table class="table table-bordered">
           <thead class="thead-dark">
             <tr>
@@ -111,41 +44,41 @@
           <tbody>
             <tr>
               <!-- Language -->
-              <td>{{repo.Repo_Language}}</td>
+              <td>{{repo.repo_languages}}</td>
               <!-- Created-at -->
-              <td>{{repo.Repo_Createdat|slice:10}}</td>
+              <td>{{repo.repo_createdat|slice:10}}</td>
               <!-- Forks -->
-              <td>{{repo.Repo_Forks}}</td>
+              <td>{{repo.repo_forks}}</td>
               <!-- Open Issue -->
-              <td>{{repo.Repo_OpenIssue}}</td>
+              <td>{{repo.repo_openissue}}</td>
               <!-- Size -->
-              {% if repo.Repo_Size|length > 1000 %}
-              <td>{{repo.Repo_Size}} MB</td>
-              {% elif repo.Repo_Size|length > 1000000 %}
-              <td>{{repo.Repo_Size}} GB</td>
+              {% if repo.repo_size|length > 1000 %}
+              <td>{{repo.repo_size}} MB</td>
+              {% elif repo.repo_size|length > 1000000 %}
+              <td>{{repo.repo_size}} GB</td>
               {% else %}
-              <td>{{repo.Repo_Size}} KB</td>
+              <td>{{repo.repo_size}} KB</td>
               {% endif %}
               <!-- Stars -->
-              <td>{{repo.Repo_Stars}}</td>
+              <td>{{repo.repo_stars}}</td>
             </tr>
           </tbody>
         </table>
         <div class="media">
           <div class="media-left">
             <p class="image is-32x32">
-              <a href="{{repo.Repo_Owner_Url}}" target="_blank"
-                ><img src="{{repo.Repo_Owner_Img}}"
+              <a href="{{repo.repo_owner_url}}" target="_blank"
+                ><img src="{{repo.repo_owner_img}}"
               /></a>
             </p>
           </div>
           <div class="media-content">
             <div class="content">
               <p>
-                <a href="{{repo.Repo_Owner_Url}}" target="_blank"
-                  >{{repo.Repo_Owner_Name}}</a
+                <a href="{{repo.repo_owner_url}}" target="_blank"
+                  >{{repo.repo_owner_name}}</a
                 >
-                Uploaded 25 Sep, 2020 &nbsp;
+                Uploaded by {{repo_uploadedby_first_name}} {{repo_uploadedby_last_name}} &nbsp;
                 <span class="tag">Repository</span>
               </p>
             </div>
@@ -162,3 +95,73 @@
   </div>
 </section>
 {% endblock %}
+
+
+<!-- Article Start -->
+<div class="box content">
+  <article class="post">
+    <h4>
+      <a href="{{repo.html_url}}" target="_blank"
+        >{{repo.name}}</a
+      >
+    </h4>
+    <hr />
+    <h5>Description</h5>
+    <p>{{repo.description}}</p>
+    <table class="table table-bordered">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">Language</th>
+          <th scope="col">Created-at</th>
+          <th scope="col">Forks</th>
+          <th scope="col">Open Issue</th>
+          <th scope="col">Size</th>
+          <th scope="col">Stars</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <!-- Language -->
+          <td>{{repo.language}}</td>
+          <!-- Created-at -->
+          <td>{{repo.created_at|slice:10}}</td>
+          <!-- Forks -->
+          <td>{{repo.forks_count}}</td>
+          <!-- Open Issue -->
+          <td>{{repo.open_issues_count}}</td>
+          <!-- Size -->
+          {% if repo.size|length > 1000 %}
+          <td>{{repo.size}} MB</td>
+          {% elif repo.size|length > 1000000 %}
+          <td>{{repo.size}} GB</td>
+          {% else %}
+          <td>{{repo.size}} KB</td>
+          {% endif %}
+          <!-- Stars -->
+          <td>{{repo.stargazers_count}}</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="media">
+      <div class="media-left">
+        <p class="image is-32x32">
+          <a href="{{repo.owner.html_url}}" target="_blank"
+            ><img src="{{repo.owner.avatar_url}}"
+          /></a>
+        </p>
+      </div>
+      <div class="media-content">
+        <div class="content">
+          <p>
+            <a href="{{repo.owner.html_url}}" target="_blank"
+              >{{user1_name}}</a
+            >
+            Uploaded 25 Sep, 2020 &nbsp;
+            <span class="tag">Repository</span>
+          </p>
+        </div>
+      </div>
+    </div>
+</article>
+</div>
+<!-- Article End -->

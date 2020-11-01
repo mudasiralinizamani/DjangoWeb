@@ -2,19 +2,21 @@ import requests
 from pprint import pprint
 from  github import  Github
 
-url =  f'https://api.github.com/users/DevonCrawford'
-User_data = requests.get(url).json()
-url2 =  f'https://api.github.com/repos/DevonCrawford/A-Pathfinding-Visualization'
+url = 'https://api.github.com/repos/DevonCrawford/YouTube-Descriptions-Updater'
 
-
-
-
-
+langurl = 'https://api.github.com/repos/DevonCrawford/YouTube-Descriptions-Updater/languages'
 
 def Get_Repo_Data(url):
     Data = requests.get(url).json()
     return Data
 
+def Get_Repo_Languages_Data(url):
+    Data = requests.get(url).json().get('languages_url')
+    Languages = list(requests.get(Data).json())
+    Lang = ''
+    for l in Languages:
+        Lang += f'{l}, '
+    return Lang
 
-Repo_Data = Get_Repo_Data(url2)
+
 
