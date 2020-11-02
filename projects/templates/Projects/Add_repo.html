@@ -1,0 +1,26 @@
+{% extends 'Must/Must.html' %}
+{% block title %}Tech MUD | Projects{% endblock %}
+{% load static %}
+{% block css_1 %} {% static 'Styles/Pages/Projects/Projects.css' %} {% endblock %}
+
+{% block active_projects %}active{% endblock %}
+
+{% block body %}
+<section class="container">
+    <!-- Here will be the tags aside bar -->
+    <div class="column is-11">
+      <div class="column is-3">
+            <form  method="POST">
+              {% csrf_token %}
+          Repo_url: <input type="text" placeholder="Url...." name='add-repo'>
+          <input type="submit" value="submit">
+        </form>
+      </div>
+
+    </div>
+  </section>
+{% endblock %}
+
+{% block other_script %}
+
+{% endblock %}

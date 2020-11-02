@@ -49,6 +49,7 @@ LOCAL_APPS = [
     'blog.apps.BlogConfig',
     'courses.apps.CoursesConfig',
     'videos.apps.VideosConfig',
+    'projects.apps.ProjectsConfig'
 ]
 
 # These are the third party apps - Mudasir Ali
