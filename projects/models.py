@@ -5,7 +5,7 @@ from django.contrib.auth.models import User
 
 class GithubRepository(models.Model):
     # repository_user_id = models.AutoField(null=True)
-    repo_user = models.OneToOneField(User, on_delete=models.CASCADE)
+    # repo_user = models.OneToOneField(User, on_delete=models.CASCADE)
     repo_name = models.CharField(max_length=100, default='')
     repo_url = models.CharField(max_length=300, default='')
     repo_desc = models.CharField(max_length=300, default='')

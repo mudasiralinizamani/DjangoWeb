@@ -52,7 +52,7 @@
               <!-- Open Issue -->
               <td>{{repo.repo_openissue}}</td>
               <!-- Size -->
-              {% if repo.repo_size|length > 1000 %}
+              {% if repo.repo_size|length > 100 %}
               <td>{{repo.repo_size}} MB</td>
               {% elif repo.repo_size|length > 1000000 %}
               <td>{{repo.repo_size}} GB</td>
@@ -78,7 +78,7 @@
                 <a href="{{repo.repo_owner_url}}" target="_blank"
                   >{{repo.repo_owner_name}}</a
                 >
-                Uploaded by {{repo_uploadedby_first_name}} {{repo_uploadedby_last_name}} &nbsp;
+                Uploaded by {{repo.repo_uploadedby_first_name}} {{repo.repo_uploadedby_last_name}} &nbsp;
                 <span class="tag">Repository</span>
               </p>
             </div>

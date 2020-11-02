@@ -14,6 +14,7 @@ def Projects(req):
 
 def Post_repo(req):
     Repo_Context = {}
+    
     Db_Repos = GithubRepository.objects.all()
     Repos = []
     # Adding all the repositories names into one list variable - Mudasir Ali
@@ -49,7 +50,6 @@ def Post_repo(req):
                     Repo_Owner_Url = Repo_Owner.get('html_url')
                     Repo_Uploadedby_Firstname = req.user.first_name
                     Repo_Uploaded_Lastname = req.user.last_name
-                    print(f'Print: {Repo_Url}')
                     # Adding data to Database - Mudasir Ali
                     Add_repo = GithubRepository(repo_name=Repo_Name, repo_url=Repo_Url, repo_desc=Repo_Desc, repo_languages=Repo_Languages, repo_createdat=Repo_Createdat, repo_forks=Repo_Forks, repo_size=Repo_Size, repo_stars=Repo_Stars, repo_openissue=Repo_Oppenissue, repo_owner_url=Repo_Owner_Url, repo_owner_img=Repo_Owner_Img, repo_owner_name=Repo_Owner_Name, repo_uploadedby_first_name=Repo_Uploadedby_Firstname, repo_uploadedby_last_name=Repo_Uploaded_Lastname)
                     Add_repo.save()
