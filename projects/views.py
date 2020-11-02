@@ -57,7 +57,7 @@ def Post_repo(req):
                     Add_repo = GithubRepository(repo_name=Repo_Name, repo_url=Repo_Url, repo_desc=Repo_Desc, repo_languages=Repo_Languages, repo_createdat=Repo_Createdat, repo_forks=Repo_Forks, repo_size=Repo_Size, repo_stars=Repo_Stars, repo_openissue=Repo_Oppenissue, repo_owner_url=Repo_Owner_Url, repo_owner_img=Repo_Owner_Img, repo_owner_name=Repo_Owner_Name, repo_uploadedby_first_name=Repo_Uploadedby_Firstname, repo_uploadedby_last_name=Repo_Uploaded_Lastname)
                     Add_repo.save()
                     Repo_Context = {'repo' :  GithubRepository.objects.get(repo_name=Repo_Name)}
-                    messages.info(req, 'This is How you Repository will look like.')
+                    messages.info(req, 'This is How your Repository will look like.')
                     return render(req, 'Projects/Repo.html', Repo_Context)
             else:
                 messages.error(req, 'Invalid Url')
