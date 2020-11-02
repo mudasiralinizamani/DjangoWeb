@@ -1,13 +1,19 @@
 import requests
 from pprint import pprint
 from  github import  Github
+from django.shortcuts import redirect
+from django.contrib import messages
 
-url = 'https://api.github.com/repos/DevonCrawford/YouTube-Descriptions-Updater'
+url = 'https://api.github.com/repos/DevonCrawford/YouTube-Dscriptions-Updater'
 
 langurl = 'https://api.github.com/repos/DevonCrawford/YouTube-Descriptions-Updater/languages'
 
 def Get_Repo_Data(url):
     Data = requests.get(url).json()
+    Not_found = False
+    if Data.get('message') == 'Not Found':
+        Not_found = True
+        return Not_found
     return Data
 
 def Get_Repo_Languages_Data(url):
@@ -20,3 +26,4 @@ def Get_Repo_Languages_Data(url):
 
 
 
+print(Get_Repo_Data(url))

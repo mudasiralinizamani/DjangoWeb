@@ -18,7 +18,7 @@
 
 		
     
-    {% for repo in db_repo %}
+    {% for repo in db_repo reversed %}
     <!-- Article Start -->
     <div class="box content">
       <article class="post">
@@ -44,7 +44,7 @@
           <tbody>
             <tr>
               <!-- Language -->
-              <td>{{repo.repo_languages}}</td>
+              <td style="width: 40%;">{{repo.repo_languages}}</td>
               <!-- Created-at -->
               <td>{{repo.repo_createdat|slice:10}}</td>
               <!-- Forks -->

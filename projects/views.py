@@ -14,7 +14,6 @@ def Projects(req):
 
 def Post_repo(req):
     Repo_Context = {}
-    
     Db_Repos = GithubRepository.objects.all()
     Repos = []
     # Adding all the repositories names into one list variable - Mudasir Ali
@@ -28,6 +27,10 @@ def Post_repo(req):
             if  'https://github.com/' in Repo_Url:
                 Repo_Url = Repo_Url.replace('https://github.com/', 'https://api.github.com/repos/')
                 Repo_data = Github.Get_Repo_Data(Repo_Url)
+                # Cheking the Repository is available or NOT
+                if Repo_data == True:
+                    messages.error(req, 'This Repository is not available, Plz insert another Repository url.')
+                    return redirect('Post_Repo')
                 Repo_Languages =  Github.Get_Repo_Languages_Data(Repo_Url)
                 # Cheking if the repository is already uploaded to the website - Mudasir Ali
                 if Repo_data.get('name') in Repos:
@@ -53,7 +56,8 @@ def Post_repo(req):
                     # Adding data to Database - Mudasir Ali
                     Add_repo = GithubRepository(repo_name=Repo_Name, repo_url=Repo_Url, repo_desc=Repo_Desc, repo_languages=Repo_Languages, repo_createdat=Repo_Createdat, repo_forks=Repo_Forks, repo_size=Repo_Size, repo_stars=Repo_Stars, repo_openissue=Repo_Oppenissue, repo_owner_url=Repo_Owner_Url, repo_owner_img=Repo_Owner_Img, repo_owner_name=Repo_Owner_Name, repo_uploadedby_first_name=Repo_Uploadedby_Firstname, repo_uploadedby_last_name=Repo_Uploaded_Lastname)
                     Add_repo.save()
-                    Repo_Context = {'repo' :  Repo_data}
+                    Repo_Context = {'repo' :  GithubRepository.objects.get(repo_name=Repo_Name)}
+                    messages.info(req, 'This is How you Repository will look like.')
                     return render(req, 'Projects/Repo.html', Repo_Context)
             else:
                 messages.error(req, 'Invalid Url')
