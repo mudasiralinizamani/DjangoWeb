@@ -1,8 +1,5 @@
 import requests
 from pprint import pprint
-from  github import  Github
-from django.shortcuts import redirect
-from django.contrib import messages
 
 url = 'https://api.github.com/repos/DevonCrawford/YouTube-Dscriptions-Updater'
 
