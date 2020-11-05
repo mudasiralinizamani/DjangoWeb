@@ -39,7 +39,7 @@ pre{
 
 .code-div {
   background-color: #15222ddb !important;
-  // height: 60vh;
+  overflow-x: scroll;
   font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
 }
 
@@ -94,6 +94,9 @@ $Html_Colours: (
   string: #37c537,
 );
 
+.code {
+  max-height: 70vh;
+}
 
 // CSS
 
@@ -105,19 +108,24 @@ $Css_Colours: (
   function: #7171f5,
 );
 
+#tab-content {
+  height: 65vh;
+}
 
+#sec-box {
+  border: 2px solid #f5f5f5; 
+   border-radius: 6px;
+
+}
+
+.code-pre {
+  height: 100%;
+}
 
 @media only screen and (max-width: 700px) {
   #Video_div {
     width: 100%;
   }
-  
-  .code-hero-body{
-    padding: 0;
-  }
 
-  .code-container {
-    padding: 0;
-  }
 
 }

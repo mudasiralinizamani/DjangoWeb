@@ -1,0 +1,105 @@
+{% extends 'Videos/Base/Base.html' %}
+{% load static %}
+
+{% block code_css_1 %} {% static 'Styles/Coding/Python/Style.css' %} {% endblock %}
+
+{% block code %}
+<span class="com"># You can download all the files from the Files Tab.</span>
+
+<span class="if">from</span> <span class="text">selenium</span> <span class="if">import</span> <span class="text">webdriver</span>
+<span class="if">from</span> <span class="text">time</span> <span class="if">import</span> <span class="text">sleep</span>
+
+<span class="text">driver</span> <span class="eq">=</span> <span class="string">'Chrome_WebDriver_Path'</span>
+
+<span class="if">class</span> <span class="func">InstaBot</span><span class="text">:</span>
+  <span class="if">def</span> <span class="func">__init__</span><span class="text">(</span><span class="atri">self</span><span class="text">,</span> <span class="atri">username</span><span class="text">,</span> <span class="atri">password</span><span class="text">):</span>
+    <span class="self">self</span><span class="text">.driver</span> <span class="eq">=</span> <span class="text">webdriver.</span><span class="func">Chrome</span><span class="text">(driver)</span>
+
+    <span class="self">self</span><span class="text">.username</span> <span class="eq">=</span> <span class="text">username</span>
+    <span class="self">self</span><span class="text">.password</span> <span class="eq">=</span> <span class="text">password</span>
+
+    <span class="self">self</span><span class="text">.driver.</span><span class="func">get</span><span class="text">(</span><span class="string">"https://www.instagram.com/"</span><span class="text">)</span>
+
+    <span class="func">sleep</span><span class="text">(</span><span class="int">5</span><span class="text">)</span>
+
+    <span class="self">self</span><span class="text">.driver.</span><span class="func">find_element_by_xpath</span><span class="text">(</span><span class="string">"//input[@name=\"username\"]"</span><span class="text">).</span><span class="func">send_keys</span><span class="text">(</span><span class="self">self</span><span class="text">.username)</span>
+    <span class="self">self</span><span class="text">.driver.</span><span class="func">find_element_by_xpath</span><span class="text">(</span><span class="string">"//input[@name=\"password\"]"</span><span class="text">).</span><span class="func">send_keys</span><span class="text">(</span><span class="self">self</span><span class="text">.password)</span>
+    <span class="self">self</span><span class="text">.driver.</span><span class="func">find_element_by_xpath</span><span class="text">(</span><span class="string">'//button[@type="submit"]'</span><span class="text">).</span><span class="func">click</span><span class="text">()</span>
+
+    <span class="func">sleep</span><span class="text">(</span><span class="int">5</span><span class="text">)</span>
+
+  <span class="if">def</span> <span class="func">FindMyFollowers</span><span class="text">(</span><span class="atri">self</span><span class="text">,</span> <span class="atri">number_of_followers_to_find</span><span class="text">,</span> <span class="atri">your_url_username</span><span class="text">):</span>
+    <span class="func">sleep</span><span class="text">(</span><span class="int">5</span><span class="text">)</span>
+
+    <span class="self">self</span><span class="text">.driver.</span><span class="func">get</span><span class="text">(</span><span class="string">'https://instagram.com/'</span> <span class="eq">+</span> <span class="text">your_url_username)</span>
+
+    <span class="func">sleep</span><span class="text">(</span><span class="int">2</span><span class="text">)</span>
+
+    <span class="self">self</span><span class="text">.driver.</span><span class="func">find_element_by_xpath</span><span class="text">(</span><span class="string">'//a[@href="/'</span> <span class="eq">+</span> <span class="text">your_url_username</span> <span class="eq">+</span> <span class="string">/followers/"]'</span><span class="text">).</span><span class="func">click</span><span class="text">()</span>
+
+    <span class="func">sleep</span><span class="text">(</span><span class="int">1</span><span class="text">)</span>
+
+    <span class="text">popup</span> <span class="eq">=</span> <span class="self">self</span><span class="text">.driver.</span><span class="func">find_element_by_class_name</span><span class="text">(</span><span class="string">'isgrP'</span><span class="text">)</span>
+
+    <span class="text">followers_Array</span> <span class="eq">=</span> <span class="text">[]</span>
+
+    <span class="text">i</span> <span class="eq">=</span> <span class="int">1</span>
+    <span class="if">while</span> <span class="func">len</span><span class="text">(followers_Array)</span> <span class="eq"><=</span> <span class="text">number_of_followers_to_find:</span>
+      <span class="self">self</span><span class="text">.driver.</span><span class="func">execute_script</span><span class="text">(</span><span class="string">'arguments[0].scrollTop = arguments[0].scrollHeight'</span><span class="text">, popup)</span>
+      <span class="func">sleep</span><span class="text">(</span><span class="int">0.4</span><span class="text">)</span>
+      <span class="text">Followers</span> <span class="eq">=</span> <span class="self">self</span><span class="text">.driver.</span><span class="func">find_element_by_class_name</span><span class="text">(</span><span class="string">'FPmhX'</span><span class="text">)</span>
+
+      <span class="if">for</span> <span class="text">Follower</span> <span class="if">in</span> <span class="text">Followers:</span>
+        <span class="if">if</span> <span class="text">Follower</span> <span class="eq">not in</span> <span class="text">followers_Array:</span>
+          <span class="text">followers_Array.</span><span class="func">append</span><span class="text">(Follower.text)</span>
+
+      <span class="text">i</span> <span class="eq">+=</span> <span class="int">1</span>
+
+    <span class="func">print</span><span class="text">(followers_Array)</span>
+
+    <span class="self">self</span><span class="text">.follower</span> <span class="eq">=</span> <span class="text">followers_Array</span>
+
+  <span class="if">def</span> <span class="func">FollowTheirFollowers</span><span class="text">(</span><span class="atri">self</span><span class="text">,</span> <span class="atri">number_of_followers_to_follow</span><span class="text">):</span>
+    <span class="if">for</span> <span class="text">Follower</span> <span class="if">in</span> <span class="self">self</span><span class="text">.followers:</span>
+      <span class="self">self</span><span class="text">.driver.</span><span class="func">get</span><span class="text">(</span><span class="string">'https://instagram.com/'</span> <span class="eq">+</span> <span class="text">Follower)</span>
+      <span class="func">sleep</span><span class="text">(</span><span class="int">2</span><span class="text">)</span>
+
+      <span class="if">if</span><span class="text">(</span><span class="func">len</span><span class="text">(</span><span class="self">self</span><span class="text">.driver.</span><span class="func">find_element_by_xpath</span><span class="string">"//*[contains(text(), 'This Account is Private')]"</span><span class="text">))</span> <span class="eq">></span> <span class="int">0</span><span class="text">):</span>
+        <span class="com"># If the follower is private, we can't se their follower list, So skip them</span>
+        <span class="if">continue</span>
+      
+      <span class="self">self</span><span class="text">.driver.</span><span class="func">find_element_by_xpath</span><span class="text">(</span><span class="string">'//a[@href="/'</span> <span class="eq">+</span> <span class="text">Follower</span> <span class="eq">+</span> <span class="string">'/followers/"]'</span><span class="text">).</span><span class="func">click</span><span class="text">()</span>
+
+      <span class="func">sleep</span><span class="text">(</span><span class="num">3</span><span class="text">)</span>
+
+      <span class="text">follow</span> <span class="eq">=</span> <span class="self">self</span><span class="text">.driver.</span><span class="func">find_element_by_xpath</span><span class="text">(</span><span class="string">"//button[contains(text(), 'Follow')]"</span><span class="text">)</span>
+
+      <span class="text">i</span> <span class="eq">=</span> <span class="int">1</span>
+
+      <span class="if">for</span> <span class="text">follower</span> <span class="if">in</span> <span class="text">follow:</span>
+        <span class="if">if</span><span class="text">(i</span> <span class="eq">!=</span> <span class="int">1</span><span class="text">):</span>
+          <span class="self">self</span><span class="text">.driver.</span><span class="func">execute_script</span><span class="string">"arguments[0].click();"</span><span class="text">, follower)</span>
+
+        <span class="if">elif</span><span class="text">(i</span> <span class="eq">></span> <span class="text">number_of_followers_to_follow):</span>
+          <span class="if">break</span>
+
+        <span class="text">i</span> <span class="eq">+=</span> <span class="int">1</span>
+
+      <span class="func">sleep</span><span class="text">(</span><span class="int">2</span><span class="text">)</span>
+
+
+
+<span class="text">Bot</span> <span class="eq">=</span> <span class="func">InstaBot</span><span class="text">(</span><span class="string">'Your Username'</span><span class="text">,</span> <span class="string">'Your Password'</span><span class="text">)</span>
+<span class="text">Bot.</span><span class="func">FindMyFollowers</span><span class="text">(</span><span class="int">10</span><span class="text">,</span> <span class="string">'Your_Url_Username'</span><span class="text">)</span>
+<span class="text">Bot.</span><span class="func">FollowTheirFollowers</span><span class="text">(</span><span class="int">10</span><span class="text">)</span>
+
+{% endblock %}
+
+
+{% block desc %}
+{{desc}}
+{% endblock %}
+
+{% block files %}
+<a href="{% static code_download %}" download>InstaBot.py</a>
+{% endblock %}

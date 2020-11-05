@@ -36,6 +36,7 @@ pre {
 
 .code-div {
   background-color: #15222ddb !important;
+  overflow-x: scroll;
   font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
 }
 
@@ -77,15 +78,26 @@ pre {
   margin-left: 10.13rem;
 }
 
+.code {
+  max-height: 70vh;
+}
+
+#tab-content {
+  height: 65vh;
+}
+
+#sec-box {
+  border: 2px solid #f5f5f5;
+  border-radius: 6px;
+}
+
+.code-pre {
+  height: 100%;
+}
+
 @media only screen and (max-width: 700px) {
   #Video_div {
     width: 100%;
-  }
-  .code-hero-body {
-    padding: 0;
-  }
-  .code-container {
-    padding: 0;
   }
 }
 /*# sourceMappingURL=Style.css.map */

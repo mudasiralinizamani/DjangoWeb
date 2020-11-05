@@ -20,7 +20,7 @@ Dates = {'Video_1': 'Aug 14, 2020', 'Video_2': 'Sep 1, 2020', 'Video_3': 'Sep 6,
 Links = {'Video_1': 'Video_1', 'Video_2': 'Video_2', 'Video_3': 'Video_3'}
 
 Video_Links = {'Video_1': 'https://www.youtube.com/embed/nER0LN0gIKY', 'Video_2': 'https://www.youtube.com/embed/mjzBYfNEDX0', 'Video_3': 'https://www.youtube.com/embed/DtLpy4uh9TU'}
-Code_Download = {'Video_1': ['Downloads/Codes/Videos/Video_1/Index.html', ''],
+Code_Download = {'Video_1': ['Downloads/Codes/Videos/Video_1/Index.html', 'Downloads/Codes/Videos/Video_1/Index.css'],
                 'Video_2': 'Downloads/Codes/Videos/Video_2/Instagram_login_automation.py',
                 'Video_3': 'Downloads/Codes/Videos/Video_3/Bot.py'
                 }
@@ -40,15 +40,16 @@ def Video_1(req):
                 'desc': Descyptions.get('Video_1'),
                 'video_link': Video_Links.get('Video_1'),
                 'code_download': Code_Download.get('Video_1')[0],
+                'code_download_2': Code_Download.get('Video_1')[1],
                 }
-    return render(req, 'videos/Video_1.html', Context)
+    return render(req, 'Videos/Video_1.html', Context)
 
 def Video_2(req):
     Context = {'title': f'{Titles[2]} || SHORT VIDEO || Mudasir Ali',
                 'desc': Descyptions.get('Video_2'),
                 'video_link': Video_Links.get('Video_2'),
                 'code_download': Code_Download.get('Video_2')}
-    return render(req, 'videos/Video_2.html', Context)
+    return render(req, 'Videos/Video_2.html', Context)
 
 
 def Video_3(req):
@@ -56,4 +57,4 @@ def Video_3(req):
                 'desc': Descyptions.get('Video_3'),
                 'video_link': Video_Links.get('Video_3'),
                 'code_download': Code_Download.get('Video_3')}
-    return render(req, 'videos/Video_3.html', Context)
+    return render(req, 'Videos/Video_3.html', Context)

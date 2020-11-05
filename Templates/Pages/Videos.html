@@ -1,13 +1,12 @@
-{% extends 'Must/Must.html' %}
+{% extends 'Base/Base.html' %}
 {% block title %}Tech MUD | Videos{% endblock %}
 {% load static %}
-{% block css_1 %}{% static 'Styles/Pages/Videos/Videos.css' %}{% endblock %}
 {% block active_videos %}active{% endblock %}
 
 {% block body %}
-<div class="container box-container">
-  <div class="section">
-    <div class="row columns is-multiline">
+  <section class="section">
+    <div class="container">
+    <div class="columns is-multiline">
       <div class="column is-4">
         <div class="card large my-box">
           <div class="card-image">
@@ -18,7 +17,7 @@
             </figure>
           </div>
           <div class="card-content">
-            <div class="media">
+            <div class="media is-flex is-flex-direction-column">
               <div class="media-left">
                 <figure class="image is-48x48">
                   <img
@@ -55,7 +54,7 @@
             </figure>
           </div>
           <div class="card-content">
-            <div class="media">
+            <div class="media is-flex is-flex-direction-column">
               <div class="media-left">
                 <figure class="image is-48x48">
                   <img
@@ -92,7 +91,7 @@
             </figure>
           </div>
           <div class="card-content">
-            <div class="media">
+            <div class="media is-flex is-flex-direction-column">
               <div class="media-left">
                 <figure class="image is-48x48">
                   <img
@@ -120,7 +119,11 @@
       </div>
     </div>
   </div>
-</div>
+  </section>
+
+{% endblock %}
+
+
 <div class="ad">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <!-- Videos_2 -->
@@ -134,4 +137,3 @@
       (adsbygoogle = window.adsbygoogle || []).push({});
   </script>
 </div>
-{% endblock %}

@@ -1,0 +1,19 @@
+{% extends 'Videos/Base/Base.html' %}
+{% load static %}
+
+{% block code_css_1 %} {% static 'Styles/Coding/Python/Style.css' %} {% endblock %}
+
+{% block code %}
+<span class="com"># You can download all the files from the Files Tab.</span>
+
+{% endblock %}
+
+
+{% block desc %}
+{{desc}}
+{% endblock %}
+
+{% block files %}
+<h2 class="is-size-4 mx-2"><a href="{% static code_download %}" download>Index.html</a></h2>
+<h2 class="is-size-4 mx-2"><a href="{% static code_download_2 %}" download>Index.css</a></h2>
+{% endblock %}

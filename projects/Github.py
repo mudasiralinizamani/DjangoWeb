@@ -20,7 +20,3 @@ def Get_Repo_Languages_Data(url):
     for l in Languages:
         Lang += f'{l}, '
     return Lang
-
-
-
-print(Get_Repo_Data(url))
