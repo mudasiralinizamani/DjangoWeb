@@ -77,10 +77,21 @@
         </p>
       </div>
       <div id="description" class="highlight is-hidden">
-          <h2 class="title is-size-4">Description</h2>
-        <p>
+        <h2 class="title is-size-4 ml-1">Description</h2>
+        <p class="ml-3">
             {% block desc %}
             {% endblock %}
+            <p class="ml-5">
+              <br>
+              <br>
+              <br>
+              Links
+              <br>
+              <a href="{% url 'Facebook_link' %}" target="_blank">Facebook</a>
+              <a href="{% url 'Website_link' %}" target="_blank">Website</a>
+              <a href="{% url 'Github_link' %}" target="_blank">Github</a>
+              <a href="{% url 'Youtube_link' %}" target="_blank">Youtube</a>
+            </p>
         </p>
       </div>
       <div id="files" class="is-hidden">

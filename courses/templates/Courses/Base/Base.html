@@ -1,0 +1,153 @@
+{% extends 'Base/Base.html' %}
+{% load static %} {% block title %}Tech MUD | Courses Nodejs {{title}}{% endblock %}
+{% block active_courses %}is-active{% endblock %}
+{% block css_1 %}{% static 'Styles/Courses/Style.css' %}{% endblock %}
+
+{% block head %}
+<link rel="stylesheet" href="{% block code_css_1 %} {% endblock %}">
+<link rel="stylesheet" href="{% block code_css_2 %} {% endblock %}">
+<link rel="stylesheet" href="{% block code_css_3 %} {% endblock %}">
+<link rel="stylesheet" href="{% block code_css_4 %} {% endblock %}">
+<link rel="stylesheet" href="{% block code_css_5 %} {% endblock %}">
+{% endblock %}
+
+{% block body %}
+<section class="my-2" id="top-section">
+  <div class="columns" id="my-columns">
+    <div class="column">
+      <div id="Video_div">
+        <h1 class="title is-4 upper-title is-hidden-desktop">{{title}}</h1>
+        <iframe src="{{video_link}}" class="Video" allowfullscreen></iframe>
+        <h1 class="title is-4 lower-title is-hidden-mobile is-hidden-tablet-only">{{title}}</h1>
+      </div>
+    </div>
+    <div class="column mx-2 is-one-quarter is-hidden-mobile is-hidden-tablet-only">
+      <aside class="menu has-shadow" style="border: 2px solid #f5f5f5; border-radius: 6px;">
+        <p class="menu-label is-size-3 highlight" style="border: 1px solid #f5f5f5;">
+          Nodejs
+        </p>
+        <ul class="menu-list">
+          {% for i in course_content %}
+            {% if forloop.counter == current%}
+                <li class="my-2"><a href="/courses/nodejs-{{forloop.counter}}" class="is-active">{{forloop.counter}}: {{i}}</a></li>
+            {% else %}
+              <li class="my-2"><a href="/courses/nodejs-{{forloop.counter}}">{{forloop.counter}}: {{i}}</a></li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="bd-3" id="sec-box">
+    <div class="tabs is-boxed is-centered">
+      <ul>
+        <li class="is-active" data-target="code">
+          <a>
+            <span class="icon is-small"
+              ><i class="fas fa-laptop-code" aria-hidden="true"></i
+            ></span>
+            <span>Code</span>
+          </a>
+        </li>
+        <li data-target="description">
+          <a>
+            <span class="icon is-small"
+              ><i class="far fa-file-alt" aria-hidden="true"></i
+            ></span>
+            <span>Description</span>
+          </a>
+        </li>
+        <li data-target="files">
+          <a>
+            <span class="icon is-small"
+              ><i class="fas fa-file-code" aria-hidden="true"></i
+            ></span>
+            <span>Files</span>
+          </a>
+        </li>
+        <li data-target="content">
+          <a>
+            <span class="icon is-small"
+              ><i class="fas fa-list-alt" aria-hidden="true"></i
+            ></span>
+            <span>Course Content</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="px-1 mb-3" id="tab-content">
+      <div class="highlight" id="code">
+        <p>
+<pre class="code-pre">
+{% block code %}
+{% endblock %}
+</pre>
+        </p>
+      </div>
+      <div id="description" class="highlight is-hidden">
+        <h2 class="title is-size-4 ml-1">Description</h2>
+        <p class="ml-3">
+            {% block desc %}
+            {% endblock %}
+            <p class="ml-5">
+              <br>
+              <br>
+              <br>
+              Links
+              <br>
+              <a href="{% url 'Facebook_link' %}" target="_blank">Facebook</a>
+              <a href="{% url 'Website_link' %}" target="_blank">Website</a>
+              <a href="{% url 'Github_link' %}" target="_blank">Github</a>
+              <a href="{% url 'Youtube_link' %}" target="_blank">Youtube</a>
+            </p>
+        </p>
+      </div>
+      <div id="files" class="is-hidden">
+        <h2 class="title is-size-4">Files</h2>
+        <p>
+            {% block files %}
+            {% endblock %}
+        </p>
+      </div>
+      <div id="content" class="is-hidden">
+        <h2 class="title is-size-4">Course Content</h2>
+        <p>
+            <div id="course-content-div">
+              <ul class="menu-list">
+                {% for i in course_content %}
+                {% if forloop.counter == 1%}
+                <li class="my-2"><a href="/courses/nodejs-{{forloop.counter}}" class="is-active">{{forloop.counter}}: {{i}}</a></li>
+              {% else %}
+              <li class="my-2"><a href="/courses/nodejs-{{forloop.counter}}">{{forloop.counter}}: {{i}}</a></li>
+              {% endif %}
+              {% endfor %}
+              </ul>
+            </div>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Pagination - Mudasir Ali -->
+<nav
+  class="pagination is-rounded is-centered my-pagination"
+  role="navigation"
+  aria-label="pagination"
+>
+  <ul class="pagination-list">
+    <li><a class="pagination-link" href="{% url prev_link %}">&#60;&#60;</a></li>
+    <li><span class="pagination-ellipsis">&hellip;</span></li>
+
+    <li><span class="pagination-ellipsis">&hellip;</span></li>
+    <li><a class="pagination-link" href="{% url next_link %}">&#62;&#62;</a></li>
+  </ul>
+</nav>
+{% endblock %}
+
+
+{% block script %}
+<script src="{% static 'Js/Videos/videos.js' %}"></script>
+{% endblock %}

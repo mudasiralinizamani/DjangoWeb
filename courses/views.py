@@ -19,6 +19,7 @@ Thumbnails = {'Selenium': 'Pics/Pages/Courses/selenium.png',
               'Go': 'Pics/Pages/Courses/go.png',
               'Nodejs': 'Pics/Pages/Courses/nodejs.jpg'}
 
+Current = 1
 
 # Nodejs Variables - Mudasir Ali
 Nodejs_Videos_Link = {'Video_1': 'https://www.youtube.com/embed/PiU1mqhRd6k',
@@ -223,47 +224,60 @@ def Nodejs_1(req):
                 'code_download': Code_Download_Nodejs.get('Video_1'),
                 'course_content': Nodejs_Course_Content,
                 'prev_link': Nodejs_Links[0],
-                'next_link': Nodejs_Links[1]}
+                'next_link': Nodejs_Links[1],
+                'current': Current,
+                }
     return render(req, 'Courses/Nodejs/1.html', Context)
 
 def Nodejs_2(req):
+    Current = 2
     Context = {'title': Nodejs_Videos_Titles.get('Video_2'),
                 'desc': Nodejs_Videos_Descryptions.get('Video_2'),
                 'video_link': Nodejs_Videos_Link.get('Video_2'),
                 'code_download': Code_Download_Nodejs.get('Video_2'),
                 'course_content': Nodejs_Course_Content,
                 'prev_link': Nodejs_Links[0],
-                'next_link': Nodejs_Links[2]}
+                'next_link': Nodejs_Links[2],
+                'current': Current,
+                }
     return render(req, 'Courses/Nodejs/2.html', Context)
 
 def Nodejs_3(req):
+    Current = 3
     Context = {'title': Nodejs_Videos_Titles.get('Video_3'),
                 'desc': Nodejs_Videos_Descryptions.get('Video_3'),
                 'video_link': Nodejs_Videos_Link.get('Video_3'),
                 'code_download': Code_Download_Nodejs.get('Video_3'),
                 'course_content': Nodejs_Course_Content,
                 'prev_link': Nodejs_Links[1],
-                'next_link': Nodejs_Links[3]}
+                'next_link': Nodejs_Links[3],
+                'current': Current,
+                }
     return render(req, 'Courses/Nodejs/3.html', Context)
 
 def Nodejs_4(req):
+    Current = 4
     Context = {'title': Nodejs_Videos_Titles.get('Video_4'),
                 'desc': Nodejs_Videos_Descryptions.get('Video_4'),
                 'video_link': Nodejs_Videos_Link.get('Video_4'),
                 'code_download': Code_Download_Nodejs.get('Video_4'),
                 'course_content': Nodejs_Course_Content,
                 'prev_link': Nodejs_Links[2],
-                'next_link': Nodejs_Links[4]}
+                'next_link': Nodejs_Links[4],
+                'current': Current,
+                }
     return render(req, 'Courses/Nodejs/4.html', Context)
 
 def Nodejs_5(req):
+    Current = 5
     Context = {'title': Nodejs_Videos_Titles.get('Video_5'),
                 'desc': Nodejs_Videos_Descryptions.get('Video_5'),
                 'video_link': Nodejs_Videos_Link.get('Video_5'),
                 'code_download': Code_Download_Nodejs.get('Video_5'),
                 'course_content': Nodejs_Course_Content,
                 'prev_link': Nodejs_Links[3],
-                'next_link': Nodejs_Links[4]}
+                'next_link': Nodejs_Links[4],
+                'current': Current,}
     return render(req, 'Courses/Nodejs/5.html', Context)
 
 
@@ -275,7 +289,8 @@ def Go_1(req):
             'code_download': Go_Code_Download.get('Video_1'),
             'course_content': Go_Course_Content,
             'prev_link': Go_Links[0],
-            'next_link': Go_Links[1]}
+            'next_link': Go_Links[1],
+            'current': Current,}
     return render(req, 'Courses/Go/1.html', Context)
 
 def Go_2(req):
@@ -285,7 +300,8 @@ def Go_2(req):
             'code_download': Go_Code_Download.get('Video_2'),
             'course_content': Go_Course_Content,
             'prev_link': Go_Links[0],
-            'next_link': Go_Links[2]}
+            'next_link': Go_Links[2],
+            'current': Current,}
     return render(req, 'Courses/Go/2.html', Context)
 
 def Go_3(req):
@@ -295,7 +311,8 @@ def Go_3(req):
             'code_download': Go_Code_Download.get('Video_3'),
             'course_content': Go_Course_Content,
             'prev_link': Go_Links[1],
-            'next_link': Go_Links[3]}
+            'next_link': Go_Links[3],
+            'current': Current,}
     return render(req, 'Courses/Go/3.html', Context)
 
 def Go_4(req):
@@ -305,7 +322,8 @@ def Go_4(req):
             'code_download': Go_Code_Download.get('Video_4'),
             'course_content': Go_Course_Content,
             'prev_link': Go_Links[2],
-            'next_link': Go_Links[4]}
+            'next_link': Go_Links[4],
+            'current': Current,}
     return render(req, 'Courses/Go/4.html', Context)
 
 def Go_5(req):
@@ -315,7 +333,8 @@ def Go_5(req):
             'code_download': Go_Code_Download.get('Video_5'),
             'course_content': Go_Course_Content,
             'prev_link': Go_Links[3],
-            'next_link': Go_Links[5]}
+            'next_link': Go_Links[5],
+            'current': Current,}
     return render(req, 'Courses/Go/5.html', Context)
 
 def Go_6(req):
@@ -325,7 +344,8 @@ def Go_6(req):
             'code_download': Go_Code_Download.get('Video_6'),
             'course_content': Go_Course_Content,
             'prev_link': Go_Links[4],
-            'next_link': Go_Links[6]}
+            'next_link': Go_Links[6],
+            'current': Current,}
     return render(req, 'Courses/Go/6.html', Context)
 
 def Go_7(req):
@@ -335,7 +355,8 @@ def Go_7(req):
             'code_download': Go_Code_Download.get('Video_7'),
             'course_content': Go_Course_Content,
             'prev_link': Go_Links[5],
-            'next_link': Go_Links[7]}
+            'next_link': Go_Links[7],
+            'current': Current,}
     return render(req, 'Courses/Go/7.html', Context)
 
 def Go_8(req):
@@ -345,7 +366,8 @@ def Go_8(req):
             'code_download': Go_Code_Download.get('Video_8'),
             'course_content': Go_Course_Content,
             'prev_link': Go_Links[6],
-            'next_link': Go_Links[7]}
+            'next_link': Go_Links[7],
+            'current': Current,}
     return render(req, 'Courses/Go/2.html', Context)
 
 
@@ -358,7 +380,8 @@ def Deno_1(req):
             'code_download': Deno_Code_Download.get('Video_1'),
             'course_content': Deno_Course_Content,
             'prev_link': Deno_Links[0],
-            'next_link': Deno_Links[1]}
+            'next_link': Deno_Links[1],
+            'current': Current,}
     return render(req, 'Courses/Deno/1.html', Context)
 
 def Deno_2(req):
@@ -368,7 +391,8 @@ def Deno_2(req):
             'code_download': Deno_Code_Download.get('Video_2'),
             'course_content': Deno_Course_Content,
             'prev_link': Deno_Links[0],
-            'next_link': Deno_Links[2]}
+            'next_link': Deno_Links[2],
+            'current': Current,}
     return render(req, 'Courses/Deno/2.html', Context)
 
 def Deno_3(req):
@@ -378,7 +402,8 @@ def Deno_3(req):
             'code_download': Deno_Code_Download.get('Video_3'),
             'course_content': Deno_Course_Content,
             'prev_link': Deno_Links[1],
-            'next_link': Deno_Links[2]}
+            'next_link': Deno_Links[2],
+            'current': Current,}
     return render(req, 'Courses/Deno/2.html', Context)
 
 
@@ -390,7 +415,8 @@ def EthicalHacking_1(req):
             'video_link': EthicalHacking_Videos_Link.get('Video_1'),
             'course_content': EthicalHacking_Course_Content,
             'prev_link': EthicalHacking_Links[0],
-            'next_link': EthicalHacking_Links[1]}
+            'next_link': EthicalHacking_Links[1],
+            'current': Current,}
     return render(req, 'Courses/EthicalHacking/1.html', Context)
 
 def EthicalHacking_2(req):
@@ -399,7 +425,8 @@ def EthicalHacking_2(req):
             'video_link': EthicalHacking_Videos_Link.get('Video_2'),
             'course_content': EthicalHacking_Course_Content,
             'prev_link': EthicalHacking_Links[0],
-            'next_link': EthicalHacking_Links[1]}
+            'next_link': EthicalHacking_Links[1],
+            'current': Current,}
     return render(req, 'Courses/EthicalHacking/2.html', Context)
 
 
@@ -414,7 +441,8 @@ def Selenium_1(req):
             'code_download': Selenium_Code_Download.get('Video_1'),
             'course_content': Selenium_Course_Content,
             'prev_link': Selenium_Links[0],
-            'next_link': Selenium_Links[1]}
+            'next_link': Selenium_Links[1],
+            'current': Current,}
     return render(req, 'Courses/Selenium/1.html', Context)
 
 def Selenium_2(req):
@@ -424,5 +452,6 @@ def Selenium_2(req):
             'code_download': Selenium_Code_Download.get('Video_2'),
             'course_content': Selenium_Course_Content,
             'prev_link': Selenium_Links[0],
-            'next_link': Selenium_Links[1]}
+            'next_link': Selenium_Links[1],
+            'current': Current,}
     return render(req, 'Courses/Selenium/2.html', Context)
