@@ -143,7 +143,7 @@ def Post_1(req):
                 'next_post_thumb': Thumbnails.get('Post_2'),
                 'next_post_link': Links.get('Post_2')}
 
-    return render(req, 'blog/7_best_free_alternatives_of_adobe_premiere_pro.html', Context)
+    return render(req, 'Blog/7_best_free_alternatives_of_adobe_premiere_pro.html', Context)
 
 
 def Post_2(req):
@@ -181,7 +181,7 @@ def Post_2(req):
                 'next_post_thumb': Thumbnails.get('Post_3'),
                 'next_post_link': Links.get('Post_3')}
 
-    return render(req, 'blog/6_most_popular_javascript_libraries_in_2020.html', Context)
+    return render(req, 'Blog/6_most_popular_javascript_libraries_in_2020.html', Context)
 
 def Post_3(req):
     Context = {'recent_post_1_title': Recent_Posts_Titles[0],
@@ -218,7 +218,7 @@ def Post_3(req):
                 'next_post_thumb': Thumbnails.get('Post_4'),
                 'next_post_link': Links.get('Post_4')}
 
-    return render(req, 'blog/7_skills_you_need_as_a_javascript_developer_in_2020.html', Context)
+    return render(req, 'Blog/7_skills_you_need_as_a_javascript_developer_in_2020.html', Context)
 
 
 def Post_4(req):
@@ -255,7 +255,7 @@ def Post_4(req):
                 'next_post_title': Tittles[5],
                 'next_post_thumb': Thumbnails.get('Post_5'),
                 'next_post_link': Links.get('Post_5')}
-    return render(req, 'blog/top_4_dying_programming_languages_in_2020.html', Context)
+    return render(req, 'Blog/top_4_dying_programming_languages_in_2020.html', Context)
 
 def Post_5(req):
     Context = {'recent_post_1_title': Recent_Posts_Titles[0],
@@ -291,7 +291,7 @@ def Post_5(req):
                 'next_post_title': Tittles[6],
                 'next_post_thumb': Thumbnails.get('Post_6'),
                 'next_post_link': Links.get('Post_6')}
-    return render(req, 'blog/top_5_website_builder_apps_2020_september.html', Context)
+    return render(req, 'Blog/top_5_website_builder_apps_2020_september.html', Context)
 
 def Post_6(req):
     Context = {'recent_post_1_title': Recent_Posts_Titles[0],
@@ -327,4 +327,4 @@ def Post_6(req):
                 'next_post_title': Tittles[6],
                 'next_post_thumb': Thumbnails.get('Post_6'),
                 'next_post_link': Links.get('Post_6')}
-    return render(req, 'blog/10_most_popular_programming_Languages_and_their_uses_2020_october.html', Context)
+    return render(req, 'Blog/10_most_popular_programming_Languages_and_their_uses_2020_october.html', Context)

@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merienda+One">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="{% static 'Styles/Bulma/bulma.css' %}">
     <link rel="stylesheet" href="{% static 'Styles/Navbar/Navbar.css' %}">
     <!-- Tags to import tags for templates - Mudasir Ali -->
@@ -58,10 +59,22 @@
             <div class="navbar-end">
                 <div class="navbar-item">
                   {% if user.is_authenticated %}
-                    <img class="mx-1 image is-48x48 circle-img border-white" src="{% static 'Pics/Logos/User.jpg' %}"> {{user.first_name}} {{user.last_name}}
-                  {% else %}
-                  <a href="{% url 'Signup' %}" class="button is-info ">Signup</a>
-                  <a href="{% url 'Login' %}" class="button is-primary ml-2">Login</a>
+                  <div class="action">
+                    <div class="profile" onclick="menu();">
+                        <img src="{% static 'Pics/Logos/User.jpg' %}" alt="">
+                    </div>
+                    <div class="menu hide" id="user-menu">
+                        <h3>{{user.first_name}} {{user.last_name}}</h3>
+                        <ul>
+                            <li><a href="{% url 'Profile' %}"><i class="fa fa-user-o"></i><a href="{% url 'Profile' %}" class="pl-1">Profile</a></a></li>
+                            <li><a href="{% url 'Logout' %}"><i class="material-icons">&#xE8AC;</i><a href="{% url 'Logout' %}" class="pl-1">Logout</a></a></li>
+                          
+                        </ul>
+                    </div>
+                </div>
+                    {% else %}
+                  <a href="{% url 'Signup' %}" class="button is-success is-rounded">Signup</a>
+                  <a href="{% url 'Login' %}" class="button is-warning ml-2 is-rounded">Login</a>
                   {% endif %}
             </div>
             </div>
@@ -71,15 +84,17 @@
     <!-- Messages to the User - Mudasir Ali -->
     {% if messages %}
       {% for message in messages %}
-      <div class="alert alert-{{message.tags}} alert-dismissible fade show m-0" role="alert">
-        <strong>Message: </strong> {{message}}
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
+      <article class="message is-{{message.tags}}" id='my-message-box'>
+        <div class="message-header">
+          <p>Message</p>
+          <button class="delete" id='delete-message' aria-label="delete"></button>
+        </div>
+        <div class="message-body">
+          {{message}}
+        </div>
+      </article>
       {% endfor %}
     {% endif %}
-
     <!-- Body tag for Templates - Mudasir Ali -->
     {% block body %} 
     

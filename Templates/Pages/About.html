@@ -1,265 +1,257 @@
-{% extends 'Must/Must.html' %}
+{% extends 'Base/Base.html' %}
 {% block title %}Tech MUD | About ME{% endblock %}
-
 {% load static %}
-
-{% block css_1 %}{% static 'Styles/Pages/About/style.css' %}{% endblock %}
-{% block css_2 %}{% static 'Styles/Pages/About/icomoon/style.css' %}{% endblock %}
+{% block css_1 %}{% static 'Styles/Bootstrap/bootstrap.css' %}{% endblock %}
+{% block css_2 %}{% static 'Styles/Pages/About/style.css' %}{% endblock %}
+{% block css_3 %}{% static 'Styles/Pages/About/icomoon/style.css' %}{% endblock %}
 {% block css_4 %}{% static 'Styles/Pages/About/flexslider.css' %}{% endblock %}
 {% block css_5 %}{% static 'Styles/Pages/About/animate.css' %}{% endblock %}
-
-
-{% block active_about %}active{% endblock %}
-
-
-
-
+{% block active_about %}is-active{% endblock %}
 
 {% block body %}
+<section
+  class="site-hero"
+  id="section-home"
+  data-stellar-background-ratio="0.5"
+>
+  <div class="container">
+    <div class="row intro-text align-items-center justify-content-center">
+      <div class="col-md-10 text-center pt-5">
+        <h1 class="site-heading site-animate">
+          Hello, I'm <strong class="d-block">Mudasir Ali</strong>
+        </h1>
+        <strong class="d-block text-white text-uppercase letter-spacing"
+          >and this is About ME</strong
+        >
+      </div>
+    </div>
+  </div>
+</section>
+<!-- section -->
 
-    <section
-      class="site-hero"
-      id="section-home"
-      data-stellar-background-ratio="0.5"
-    >
-      <div class="container">
-        <div class="row intro-text align-items-center justify-content-center">
-          <div class="col-md-10 text-center pt-5">
-            <h1 class="site-heading site-animate">
-              Hello, I'm <strong class="d-block">Mudasir Ali</strong>
-            </h1>
-            <strong class="d-block text-white text-uppercase letter-spacing"
-              >and this is About ME</strong
-            >
-          </div>
+<section class="site-section" id="section-resume">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 mb-5">
+        <div class="section-heading text-center">
+          <h2>My <strong>Skills</strong></h2>
         </div>
       </div>
-    </section>
-    <!-- section -->
+      <div class="col-md-6">
+        <h2 class="mb-5">Skills</h2>
 
-    <section class="site-section" id="section-resume">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12 mb-5">
-            <div class="section-heading text-center">
-              <h2>My <strong>Skills</strong></h2>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <h2 class="mb-5">Skills</h2>
+        <div class="resume-item mb-4">
+          <span class="date"
+            ><span class="icon-calendar"></span> Jan 2020 - Processing</span
+          >
 
-            <div class="resume-item mb-4">
-              <span class="date"
-                ><span class="icon-calendar"></span> Jan 2020 - Processing</span
-              >
+          <h3>Django Developer - Backend Developer</h3>
+          <span class="school">Self learned - Intermediate</span>
+        </div>
 
-              <h3>Django Developer - Backend Developer</h3>
-              <span class="school">Self learned - Intermediate</span>
-            </div>
+        <div class="resume-item mb-4">
+          <span class="date"
+            ><span class="icon-calendar"></span> Jan 2020 - Processing</span
+          >
+          <h3>HTML, CSS - Frontend Developer</h3>
+          <span class="school">Self learned - Expert</span>
+        </div>
 
-            <div class="resume-item mb-4">
-              <span class="date"
-                ><span class="icon-calendar"></span> Jan 2020 - Processing</span
-              >
-              <h3>HTML, CSS - Frontend Developer</h3>
-              <span class="school">Self learned - Expert</span>
-            </div>
+        <div class="resume-item mb-4">
+          <span class="date"
+            ><span class="icon-calendar"></span> Aug 2020 - Processing</span
+          >
+          <h3>Full-Stack WebDeveloper</h3>
+          <span class="school">Self learned - Intermediate</span>
+        </div>
 
-            <div class="resume-item mb-4">
-              <span class="date"
-                ><span class="icon-calendar"></span> Aug 2020 - Processing</span
-              >
-              <h3>Full-Stack WebDeveloper</h3>
-              <span class="school">Self learned - Intermediate</span>
-            </div>
-
-            <div class="resume-item mb-4">
-              <span class="date"
-                ><span class="icon-calendar"></span> Aug 2020 - Processing</span
-              >
-              <h3>Nodejs Developer - Backend Developer</h3>
-              <span class="school">Self learned - Beginner</span>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <h2 class="mb-5">Experience</h2>
-
-            <div class="resume-item mb-4">
-              <span class="date"
-                ><span class="icon-calendar"></span> Jan 2020 - Started</span
-              >
-              <h3>Django Developer - Backend Developer</h3>
-              <h3>Intermediate</h3>
-            </div>
-
-            <div class="resume-item mb-4">
-              <span class="date"
-                ><span class="icon-calendar"></span> Jan 2020 - Started</span
-              >
-              <h3>HTML, CSS - Frontend Developer</h3>
-              <h3>Expert</h3>
-            </div>
-
-            <div class="resume-item mb-4">
-              <span class="date"
-                ><span class="icon-calendar"></span> Aug 2020 - Started</span
-              >
-              <h3>Full-Stack WebDeveloper</h3>
-              <h3>Intermediate</h3>
-            </div>
-
-            <div class="resume-item mb-4">
-              <span class="date"
-                ><span class="icon-calendar"></span> Aug 2020 - Started</span
-              >
-              <h3>Nodejs Developer - Backend Developer</h3>
-              <h3>Beginner</h3>
-            </div>
-          </div>
+        <div class="resume-item mb-4">
+          <span class="date"
+            ><span class="icon-calendar"></span> Aug 2020 - Processing</span
+          >
+          <h3>Nodejs Developer - Backend Developer</h3>
+          <span class="school">Self learned - Beginner</span>
         </div>
       </div>
-    </section>
-    <!-- .section -->
+      <div class="col-md-6">
+        <h2 class="mb-5">Experience</h2>
 
-    <section class="site-section" id="section-about">
-      <div class="container">
-        <div class="row mb-5 align-items-center">
-          <div class="col-lg-7 pr-lg-5 mb-5 mb-lg-0">
-            <img
-              src="{% static 'Pics/my-pic.jpg' %}"
-              alt="Image placeholder"
-              class="img-fluid about-img"
-            />
-          </div>
-          <div class="col-lg-5 pl-lg-5">
-            <div class="section-heading">
-              <h2>About <strong>Me</strong></h2>
-            </div>
-            <p class="lead">
-              I was always interested in Computers and Technology. So I decided
-              to learn programming and things like that.
-            </p>
-            <p class="mb-5">
-              I 've learned Multiple Programming languages. Python, HTML, CSS,
-              JAVASCRIPT, Dart, TypeScript. And now I am a Software Developer,
-              Full-Stack web developer.
-            </p>
+        <div class="resume-item mb-4">
+          <span class="date"
+            ><span class="icon-calendar"></span> Jan 2020 - Started</span
+          >
+          <h3>Django Developer - Backend Developer</h3>
+          <h3>Intermediate</h3>
+        </div>
 
-            <p>
-              <a
-                href="https://www.fiverr.com/technique969"
-                target="_blank"
-                class="btn btn-primary px-4 py-2 btn-sm smoothscroll"
-                >Hire Me</a
-              >
-            </p>
-          </div>
+        <div class="resume-item mb-4">
+          <span class="date"
+            ><span class="icon-calendar"></span> Jan 2020 - Started</span
+          >
+          <h3>HTML, CSS - Frontend Developer</h3>
+          <h3>Expert</h3>
+        </div>
+
+        <div class="resume-item mb-4">
+          <span class="date"
+            ><span class="icon-calendar"></span> Aug 2020 - Started</span
+          >
+          <h3>Full-Stack WebDeveloper</h3>
+          <h3>Intermediate</h3>
+        </div>
+
+        <div class="resume-item mb-4">
+          <span class="date"
+            ><span class="icon-calendar"></span> Aug 2020 - Started</span
+          >
+          <h3>Nodejs Developer - Backend Developer</h3>
+          <h3>Beginner</h3>
         </div>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
+<!-- .section -->
 
-    <section class="site-section pb-0" id="section-services">
-      <div class="container">
-        <div class="row mb-4">
-          <div class="col-md-12">
-            <div class="section-heading text-center">
-              <h2>My <strong>Services</strong></h2>
-            </div>
-          </div>
+<section class="site-section" id="section-about">
+  <div class="container">
+    <div class="row mb-5 align-items-center">
+      <div class="col-lg-7 pr-lg-5 mb-5 mb-lg-0">
+        <img
+          src="{% static 'Pics/my-pic.jpg' %}"
+          alt="Image placeholder"
+          class="img-fluid about-img"
+        />
+      </div>
+      <div class="col-lg-5 pl-lg-5">
+        <div class="section-heading">
+          <h2>About <strong>Me</strong></h2>
         </div>
-        <div class="row">
-          <div class="col-md-6 col-lg-4 text-center mb-5">
-            <div
-              class="site-service-item site-animate"
-              data-animate-effect="fadeIn"
-            >
-              <span class="icon">
-                <span class="icon-browser2"></span>
-              </span>
-              <h3 class="mb-4">Web Design</h3>
-              <p>
-                Far far away, behind the word mountains, far from the countries
-                Vokalia and Consonantia, there live the blind texts. Separated
-                they live in Bookmarksgrove right at the coast of the Semantics,
-                a large language ocean.
-              </p>
-              <p>
-                <a href="#" class="site-link"
-                  >Learn More <i class="icon-chevron-right"></i
-                ></a>
-              </p>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 text-center mb-5">
-            <div
-              class="site-service-item site-animate"
-              data-animate-effect="fadeIn"
-            >
-              <span class="icon">
-                <span class="icon-presentation"></span>
-              </span>
-              <h3 class="mb-4">Web Development</h3>
-              <p>
-                A small river named Duden flows by their place and supplies it
-                with the necessary regelialia. It is a paradisematic country, in
-                which roasted parts of sentences fly into your mouth.
-              </p>
-              <p>
-                <a href="#" class="site-link"
-                  >Learn More <i class="icon-chevron-right"></i
-                ></a>
-              </p>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 text-center mb-5">
-            <div
-              class="site-service-item site-animate"
-              data-animate-effect="fadeIn"
-            >
-              <span class="icon">
-                <span class="icon-video2"></span>
-              </span>
-              <h3 class="mb-4">Video Editing</h3>
-              <p>
-                Even the all-powerful Pointing has no control about the blind
-                texts it is an almost unorthographic life One day however a
-                small line of blind text by the name of Lorem Ipsum decided to
-                leave for the far World of Grammar.
-              </p>
-              <p>
-                <a href="#" class="site-link"
-                  >Learn More <i class="icon-chevron-right"></i
-                ></a>
-              </p>
-            </div>
-          </div>
+        <p class="lead">
+          I was always interested in Computers and Technology. So I decided to
+          learn programming and things like that.
+        </p>
+        <p class="mb-5">
+          I 've learned Multiple Programming languages. Python, HTML, CSS,
+          JAVASCRIPT, Dart, TypeScript. And now I am a Software Developer,
+          Full-Stack web developer.
+        </p>
+
+        <p>
+          <a
+            href="https://www.fiverr.com/technique969"
+            target="_blank"
+            class="btn btn-primary px-4 py-2 btn-sm smoothscroll"
+            >Hire Me</a
+          >
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="site-section pb-0" id="section-services">
+  <div class="container">
+    <div class="row mb-4">
+      <div class="col-md-12">
+        <div class="section-heading text-center">
+          <h2>My <strong>Services</strong></h2>
         </div>
       </div>
-    </section>
-
-    <footer class="site-footer">
-      <div class="container">
-        <div class="row mb-5">
-          <p class="col-12 text-center"></p>
-        </div>
-
-        <div class="row mb-5">
-          <div class="col-md-12 text-center">
-            <p>
-              <a
-                href="https://www.facebook.com/profile.php?id=100027863826416"
-                class="social-item"
-                target="_blank"
-                ><span class="icon-facebook2"></span
-              ></a>
-            </p>
-          </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 col-lg-4 text-center mb-5">
+        <div
+          class="site-service-item site-animate"
+          data-animate-effect="fadeIn"
+        >
+          <span class="icon">
+            <span class="icon-browser2"></span>
+          </span>
+          <h3 class="mb-4">Full Stack Web Development</h3>
+          <p>
+            Far far away, behind the word mountains, far from the countries
+            Vokalia and Consonantia, there live the blind texts. Separated they
+            live in Bookmarksgrove right at the coast of the Semantics, a large
+            language ocean.
+          </p>
+          <p>
+            <a href="#" class="site-link"
+              >Learn More <i class="icon-chevron-right"></i
+            ></a>
+          </p>
         </div>
       </div>
-    </footer>
+      <div class="col-md-6 col-lg-4 text-center mb-5">
+        <div
+          class="site-service-item site-animate"
+          data-animate-effect="fadeIn"
+        >
+          <span class="icon">
+            <span class="icon-presentation"></span>
+          </span>
+          <h3 class="mb-4">Full Stack Software Development</h3>
+          <p>
+            A small river named Duden flows by their place and supplies it with
+            the necessary regelialia. It is a paradisematic country, in which
+            roasted parts of sentences fly into your mouth.
+          </p>
+          <p>
+            <a href="#" class="site-link"
+              >Learn More <i class="icon-chevron-right"></i
+            ></a>
+          </p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 text-center mb-5">
+        <div
+          class="site-service-item site-animate"
+          data-animate-effect="fadeIn"
+        >
+          <span class="icon">
+            <span class="icon-video2"></span>
+          </span>
+          <h3 class="mb-4">Video Editing</h3>
+          <p>
+            Even the all-powerful Pointing has no control about the blind texts
+            it is an almost unorthographic life One day however a small line of
+            blind text by the name of Lorem Ipsum decided to leave for the far
+            World of Grammar.
+          </p>
+          <p>
+            <a href="#" class="site-link"
+              >Learn More <i class="icon-chevron-right"></i
+            ></a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="row mb-5">
+      <p class="col-12 text-center"></p>
+    </div>
+
+    <div class="row mb-5">
+      <div class="col-md-12 text-center">
+        <p>
+          <a
+            href="https://www.facebook.com/profile.php?id=100027863826416"
+            class="social-item"
+            target="_blank"
+            ><span class="icon-facebook2"></span
+          ></a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
 {% endblock %}
 
-{% block other_script %} 
+{% block other_script %}
 <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-
 {% endblock %}

@@ -20,3 +20,22 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
+
+const message_box = document.getElementById("my-message-box");
+const delete_button = document.getElementById("delete-message");
+
+delete_button.addEventListener("click", () => {
+  message_box.classList.add("is-hidden");
+});
+
+const user_button = document.getElementById("user-dropdown-t");
+const user_dropdown = document.getElementById("user-dropdown");
+
+user_button.addEventListener("click", () => {
+  user_dropdown.classList.add("is-active");
+});
+
+function menu() {
+  const menu = document.getElementById("user-menu");
+  menu.classList.toggle("active");
+}
