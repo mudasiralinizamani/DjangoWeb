@@ -1,0 +1,64 @@
+.circle-img{
+  border-radius: 50%;
+}
+
+@media only screen and (max-width: 1200px) {
+  .box {
+    width: 40%;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .box {
+    max-width: 80%;
+    min-width: 75%;
+    height: 43em;
+  }
+
+  .media {
+    display: block !important;
+
+    .title {
+      font-size: 1.2rem !important;
+      margin-top: 0.2em;
+    }
+  }
+
+  .content {
+    h4 {
+      font-size: 1.1rem !important;
+      margin-bottom: 0.6em !important;
+    }
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .box-sec {
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .box-section {
+    flex-direction: column;
+    margin: 0;
+  }
+  .box {
+    margin: 0;
+    width: 95%;
+    display: block !important;
+    height: 36em;
+    max-height: 40em;
+    width: 90%;
+    max-width: 100%;
+
+    .box-img {
+      height: 10em;
+      width: 100%;
+    }
+
+    .card-content {
+      padding: 0.5rem 0;
+    }
+  }
+}
