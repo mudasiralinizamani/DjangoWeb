@@ -51,12 +51,19 @@ urlpatterns = [
     #  Twiter Link
     path('https://twitter.com/Mudasir78169406', views.Twitter, name="Twitter_link"),
 
+
     #  Youtube Link
     path('https://www.youtube.com/channel/UCTc1CZwD4fEGij3yZ9bwRQg?sub_confirmation=1', views.Youtube, name="Youtube_link"),
 
     #  Website Link
     path('https://techmudboy.com/', views.Website, name="Website_link"),
-    
+
+    #  Linkedin Link
+    path('https://techmudboy.com/', views.Website, name="Linkedin_link"),
+
+    #  Fiver Link
+    path('https://www.fiverr.com/users/technique969/seller_dashboard', views.Website, name="Fiver_link"),
+
 ]
 
 

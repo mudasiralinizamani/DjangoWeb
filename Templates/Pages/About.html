@@ -1,257 +1,361 @@
 {% extends 'Base/Base.html' %}
 {% block title %}Tech MUD | About ME{% endblock %}
 {% load static %}
-{% block css_1 %}{% static 'Styles/Bootstrap/bootstrap.css' %}{% endblock %}
-{% block css_2 %}{% static 'Styles/Pages/About/style.css' %}{% endblock %}
-{% block css_3 %}{% static 'Styles/Pages/About/icomoon/style.css' %}{% endblock %}
-{% block css_4 %}{% static 'Styles/Pages/About/flexslider.css' %}{% endblock %}
-{% block css_5 %}{% static 'Styles/Pages/About/animate.css' %}{% endblock %}
+{% block css_1 %}{% static 'Styles/Pages/About/style.css' %}{% endblock %}
 {% block active_about %}is-active{% endblock %}
 
+<link
+  rel="stylesheet"
+  href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+  integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
+  crossorigin="anonymous"
+/>
+<link
+  href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700"
+  rel="stylesheet"
+/>
+
 {% block body %}
-<section
-  class="site-hero"
-  id="section-home"
-  data-stellar-background-ratio="0.5"
->
-  <div class="container">
-    <div class="row intro-text align-items-center justify-content-center">
-      <div class="col-md-10 text-center pt-5">
-        <h1 class="site-heading site-animate">
-          Hello, I'm <strong class="d-block">Mudasir Ali</strong>
-        </h1>
-        <strong class="d-block text-white text-uppercase letter-spacing"
-          >and this is About ME</strong
-        >
-      </div>
-    </div>
-  </div>
-</section>
-<!-- section -->
 
-<section class="site-section" id="section-resume">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12 mb-5">
-        <div class="section-heading text-center">
-          <h2>My <strong>Skills</strong></h2>
-        </div>
-      </div>
-      <div class="col-md-6">
-        <h2 class="mb-5">Skills</h2>
-
-        <div class="resume-item mb-4">
-          <span class="date"
-            ><span class="icon-calendar"></span> Jan 2020 - Processing</span
-          >
-
-          <h3>Django Developer - Backend Developer</h3>
-          <span class="school">Self learned - Intermediate</span>
-        </div>
-
-        <div class="resume-item mb-4">
-          <span class="date"
-            ><span class="icon-calendar"></span> Jan 2020 - Processing</span
-          >
-          <h3>HTML, CSS - Frontend Developer</h3>
-          <span class="school">Self learned - Expert</span>
-        </div>
-
-        <div class="resume-item mb-4">
-          <span class="date"
-            ><span class="icon-calendar"></span> Aug 2020 - Processing</span
-          >
-          <h3>Full-Stack WebDeveloper</h3>
-          <span class="school">Self learned - Intermediate</span>
-        </div>
-
-        <div class="resume-item mb-4">
-          <span class="date"
-            ><span class="icon-calendar"></span> Aug 2020 - Processing</span
-          >
-          <h3>Nodejs Developer - Backend Developer</h3>
-          <span class="school">Self learned - Beginner</span>
-        </div>
-      </div>
-      <div class="col-md-6">
-        <h2 class="mb-5">Experience</h2>
-
-        <div class="resume-item mb-4">
-          <span class="date"
-            ><span class="icon-calendar"></span> Jan 2020 - Started</span
-          >
-          <h3>Django Developer - Backend Developer</h3>
-          <h3>Intermediate</h3>
-        </div>
-
-        <div class="resume-item mb-4">
-          <span class="date"
-            ><span class="icon-calendar"></span> Jan 2020 - Started</span
-          >
-          <h3>HTML, CSS - Frontend Developer</h3>
-          <h3>Expert</h3>
-        </div>
-
-        <div class="resume-item mb-4">
-          <span class="date"
-            ><span class="icon-calendar"></span> Aug 2020 - Started</span
-          >
-          <h3>Full-Stack WebDeveloper</h3>
-          <h3>Intermediate</h3>
-        </div>
-
-        <div class="resume-item mb-4">
-          <span class="date"
-            ><span class="icon-calendar"></span> Aug 2020 - Started</span
-          >
-          <h3>Nodejs Developer - Backend Developer</h3>
-          <h3>Beginner</h3>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- .section -->
-
-<section class="site-section" id="section-about">
-  <div class="container">
-    <div class="row mb-5 align-items-center">
-      <div class="col-lg-7 pr-lg-5 mb-5 mb-lg-0">
-        <img
-          src="{% static 'Pics/my-pic.jpg' %}"
-          alt="Image placeholder"
-          class="img-fluid about-img"
-        />
-      </div>
-      <div class="col-lg-5 pl-lg-5">
-        <div class="section-heading">
-          <h2>About <strong>Me</strong></h2>
-        </div>
-        <p class="lead">
-          I was always interested in Computers and Technology. So I decided to
-          learn programming and things like that.
-        </p>
-        <p class="mb-5">
-          I 've learned Multiple Programming languages. Python, HTML, CSS,
-          JAVASCRIPT, Dart, TypeScript. And now I am a Software Developer,
-          Full-Stack web developer.
-        </p>
-
-        <p>
-          <a
-            href="https://www.fiverr.com/technique969"
-            target="_blank"
-            class="btn btn-primary px-4 py-2 btn-sm smoothscroll"
-            >Hire Me</a
-          >
-        </p>
-      </div>
+<!-- Header -->
+<section class="hero is-link is-fullheight is-fullheight-with-navbar">
+  <div class="hero-body">
+    <div class="container">
+      Hello! I am
+      <h1 class="title is-1">Mudasir Ali</h1>
+      <h2 class="subtitle is-3">Full Stack Developer</h2>
     </div>
   </div>
 </section>
 
-<section class="site-section pb-0" id="section-services">
-  <div class="container">
-    <div class="row mb-4">
-      <div class="col-md-12">
-        <div class="section-heading text-center">
-          <h2>My <strong>Services</strong></h2>
+<!-- About -->
+<section class="section" id="about">
+  <!-- Title -->
+  <div class="section-heading">
+    <h3 class="title is-2">About Me</h3>
+    <!-- <h4 class="subtitle is-5">Jack of all trades, master of "some"</h4> -->
+    <div class="container">
+      <p>
+        Hi, my name is Mudasir Ali. Web developer with more than
+        <strong>2 years</strong>. <strong>and Software Developer</strong>,
+        extensive knowledge of modern Web techniques and love for
+        <strong>Coffee</strong>. Looking for an opportunity to work and upgrade,
+        as well as being involved in an organization that believes in gaining a
+        competitive edge and giving back to the community.
+      </p>
+    </div>
+  </div>
+
+  <div class="columns has-same-height is-gapless">
+    <div class="column">
+      <!-- Profile -->
+      <div class="card">
+        <div class="card-content">
+          <h3 class="title is-4">Profile</h3>
+
+          <div class="content">
+            <table class="table-profile">
+              <tr>
+                <th colspan="1"></th>
+                <th colspan="2"></th>
+              </tr>
+              <tr>
+                <td>Name:</td>
+                <td>Mudasir Ali Nizamani</td>
+              </tr>
+              <tr>
+                <td>Phone:</td>
+                <td>+92 3421399683</td>
+              </tr>
+              <tr>
+                <td>Email:</td>
+                <td>mudasiralinizamani@gmail.com</td>
+              </tr>
+            </table>
+          </div>
+          <br />
+          <div class="buttons has-addons is-centered">
+            <a href="{% url 'Github_link' %}" target="_blank" class="button is-link">Github</a>
+            <a href="{% url 'Linkedin_link' %}" target="_blank" class="button is-link">LinkedIn</a>
+            <a href="{% url 'Twitter_link' %}" target="_blank" class="button is-link">Twitter</a>
+            <a href="{% url 'Fiver_link' %}" target="_blank" class="button is-link">HireME</a>
+          </div>
         </div>
       </div>
     </div>
-    <div class="row">
-      <div class="col-md-6 col-lg-4 text-center mb-5">
-        <div
-          class="site-service-item site-animate"
-          data-animate-effect="fadeIn"
-        >
-          <span class="icon">
-            <span class="icon-browser2"></span>
-          </span>
-          <h3 class="mb-4">Full Stack Web Development</h3>
-          <p>
-            Far far away, behind the word mountains, far from the countries
-            Vokalia and Consonantia, there live the blind texts. Separated they
-            live in Bookmarksgrove right at the coast of the Semantics, a large
-            language ocean.
-          </p>
-          <p>
-            <a href="#" class="site-link"
-              >Learn More <i class="icon-chevron-right"></i
-            ></a>
-          </p>
+    <div class="column">
+      <!-- Profile picture -->
+      <div class="card">
+        <div class="card-image">
+          <figure class="image is-4by3">
+            <img src="{% static 'Pics/my-pic.jpg' %}" alt="My image" />
+          </figure>
         </div>
       </div>
-      <div class="col-md-6 col-lg-4 text-center mb-5">
-        <div
-          class="site-service-item site-animate"
-          data-animate-effect="fadeIn"
-        >
-          <span class="icon">
-            <span class="icon-presentation"></span>
-          </span>
-          <h3 class="mb-4">Full Stack Software Development</h3>
-          <p>
-            A small river named Duden flows by their place and supplies it with
-            the necessary regelialia. It is a paradisematic country, in which
-            roasted parts of sentences fly into your mouth.
-          </p>
-          <p>
-            <a href="#" class="site-link"
-              >Learn More <i class="icon-chevron-right"></i
-            ></a>
-          </p>
-        </div>
-      </div>
-      <div class="col-md-6 col-lg-4 text-center mb-5">
-        <div
-          class="site-service-item site-animate"
-          data-animate-effect="fadeIn"
-        >
-          <span class="icon">
-            <span class="icon-video2"></span>
-          </span>
-          <h3 class="mb-4">Video Editing</h3>
-          <p>
-            Even the all-powerful Pointing has no control about the blind texts
-            it is an almost unorthographic life One day however a small line of
-            blind text by the name of Lorem Ipsum decided to leave for the far
-            World of Grammar.
-          </p>
-          <p>
-            <a href="#" class="site-link"
-              >Learn More <i class="icon-chevron-right"></i
-            ></a>
-          </p>
+    </div>
+    <div class="column">
+      <!-- Skills -->
+      <div class="card">
+        <div class="card-content skills-content">
+          <h3 class="title is-4">Skills</h3>
+          <div class="content">
+            <article class="media">
+              <div class="media-content">
+                <div class="content">
+                  <p>
+                    <strong>Python:</strong>
+                    <br />
+                    <progress
+                      class="progress is-primary"
+                      value="80"
+                      max="100"
+                    ></progress>
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <article class="media">
+              <div class="media-content">
+                <div class="content">
+                  <p>
+                    <strong>Django:</strong>
+                    <br />
+                    <progress
+                      class="progress is-primary"
+                      value="75"
+                      max="100"
+                    ></progress>
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <article class="media">
+              <div class="media-content">
+                <div class="content">
+                  <p>
+                    <strong>HTML5/CSS3</strong>
+                    <br />
+                    <progress
+                      class="progress is-primary"
+                      value="85"
+                      max="100"
+                    ></progress>
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <article class="media">
+              <div class="media-content">
+                <div class="content">
+                  <p>
+                    <strong>Node.js:</strong>
+                    <br />
+                    <progress
+                      class="progress is-primary"
+                      value="45"
+                      max="100"
+                    ></progress>
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <article class="media">
+              <div class="media-content">
+                <div class="content">
+                  <p>
+                    <strong>KivyMD</strong>
+                    <br />
+                    <progress
+                      class="progress is-primary"
+                      value="88"
+                      max="100"
+                    ></progress>
+                  </p>
+                </div>
+              </div>
+            </article>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<footer class="site-footer">
+<!-- Skills tags -->
+<br />
+<div class="tags custom-tags">
+  <span class="tag is-light">Django</span><span class="tag is-light">HTML5</span
+  ><span class="tag is-light">Bulma</span
+  ><span class="tag is-light">JavaScript</span
+  ><span class="tag is-light">Dart</span><span class="tag is-light">Python</span
+  ><span class="tag is-light">CSS3</span
+  ><span class="tag is-light">Bootstrap</span
+  ><span class="tag is-light">Nodejs</span
+  ><span class="tag is-light">jQuery</span><span class="tag is-light">Pug</span
+  ><span class="tag is-light">TypeScript</span
+  ><span class="tag is-light">SASS/SCSS</span
+  ><span class="tag is-light">Webpack</span
+  ><span class="tag is-light">Git</span>
+</div>
+
+<!-- Services -->
+<section class="section" id="services">
+  <div class="section-heading">
+    <h3 class="title is-2">Services</h3>
+    <h4 class="subtitle is-5">What can I do for you?</h4>
+  </div>
   <div class="container">
-    <div class="row mb-5">
-      <p class="col-12 text-center"></p>
+    <div class="columns">
+      <div class="column">
+        <div class="box">
+          <div class="content">
+            <h4 class="title is-5">Front End Web Development</h4>
+            Develop Front End using latest standards with HTML5/CSS3 with added
+            functionality using JavaScript and Bulma, Bootstrap.
+          </div>
+        </div>
+      </div>
+      <div class="column">
+        <div class="box">
+          <div class="content">
+            <h4 class="title is-5">Back End Web Development</h4>
+            Develop Back End application/service using Django.
+          </div>
+        </div>
+      </div>
     </div>
 
-    <div class="row mb-5">
-      <div class="col-md-12 text-center">
-        <p>
-          <a
-            href="https://www.facebook.com/profile.php?id=100027863826416"
-            class="social-item"
-            target="_blank"
-            ><span class="icon-facebook2"></span
-          ></a>
-        </p>
+    <div class="columns">
+      <div class="column">
+        <div class="box">
+          <div class="content">
+            <h4 class="title is-5">Software Development</h4>
+            Develop a Software with Python KivyMD.
+          </div>
+        </div>
+      </div>
+      <div class="column">
+        <div class="box">
+          <div class="content">
+            <h4 class="title is-5">Back End Web Development</h4>
+            Develop Back End application/service using Node.js or ASP .NET and
+            SQL server or Mongo DB databases.
+          </div>
+        </div>
       </div>
     </div>
   </div>
-</footer>
+</section>
+
+<!-- Resume -->
+<section class="section" id="resume">
+  <div class="section-heading">
+    <h3 class="title is-2">Resume</h3>
+    <h4 class="subtitle is-5">More about my past</h4>
+    <a href="#" class="button is-link is-medium">
+      <span class="icon">
+        <i class="fas fa-file-alt"></i>
+      </span>
+      <span>Download My Resume</span>
+    </a>
+  </div>
+</section>
+
+<!-- Portfolio -->
+<section class="section" id="portfolio">
+  <div class="container">
+    <div class="section-heading">
+      <h3 class="title is-2">Portfolio</h3>
+      <h4 class="subtitle is-5">My latest works</h4>
+    </div>
+    <br />
+
+    <div class="container portfolio-container">
+      <div class="columns">
+        <div class="column is-4">
+          <!-- admin -->
+          <div class="card">
+            <header class="card-header">
+              <p class="card-header-title">
+                <span>SMS<small>(Subject Management System)</small></span>
+                <span class="is-pulled-right">
+                  <a href="">
+                    <span class="tag is-default">v0.7</span>
+                  </a>
+                  <span class="tag is-default">Desktop Software</span>
+                  <span class="tag is-danger">WIP</span>
+                </span>
+              </p>
+            </header>
+            <div class="card-content">
+              <figure class="image">
+                <img
+                  src="../images/admin.png"
+                  alt="SMS Pic"
+                />
+              </figure>
+            </div>
+            <footer class="card-footer">
+              <a
+                href="https://github.com/mudasiralinizamani/SMS"
+                class="card-footer-item"
+                target="_blank"
+                >Source Code</a
+              >
+            </footer>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Achievement Level -->
+<!-- <section class="section">
+    <nav class="level">
+      <div class="level-item has-text-centered">
+        <div>
+          <p class="heading">Tweets</p>
+          <p class="title">3,456</p>
+        </div>
+      </div>
+      <div class="level-item has-text-centered">
+        <div>
+          <p class="heading">Following</p>
+          <p class="title">123</p>
+        </div>
+      </div>
+      <div class="level-item has-text-centered">
+        <div>
+          <p class="heading">Followers</p>
+          <p class="title">456K</p>
+        </div>
+      </div>
+      <div class="level-item has-text-centered">
+        <div>
+          <p class="heading">Likes</p>
+          <p class="title">789</p>
+        </div>
+      </div>
+    </nav>
+  </section> -->
+
+<!-- Contact -->
+<section class="section" id="contact">
+  <div class="container">
+    <div class="section-heading">
+      <h3 class="title is-2">Get in touch</h3>
+      <a class="is-4" href="{% url 'Contact' %}">Go to Contact Page</a>
+    </div>
+    <br />
+  </div>
+</section>
 
 {% endblock %}
-
 {% block other_script %}
 <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 {% endblock %}
