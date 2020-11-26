@@ -103,4 +103,18 @@
 .active {
   display: block;
 }
+
+@media only screen and (max-width: 1022px) {
+  .action {
+    position: relative;
+    top: 20px;
+    right: 0px;
+  }
+  .action .menu {
+    left: 0px;
+  }
+  .action .menu::before {
+    left: 20px;
+  }
+}
 /*# sourceMappingURL=Navbar.css.map */
